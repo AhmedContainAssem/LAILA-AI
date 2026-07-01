@@ -1,8 +1,10 @@
 # 🧠 LAILA's Philosophy
 
-> "Intelligence is not a property of the model. It's a property of the surrounding architecture."
+> "LAILA is not powerful because of the model behind her. She's powerful because of the system around her."
 
-> "Don't make the model work harder. Build a system that allows the model to think better."
+> "The model thinks. The system remembers, acts, observes, and adapts. Together, they become intelligent."
+
+> "Don't make the model work harder. Build a system that lets the model think better."
 
 ## 1.1 Why does LAILA exist?
 LAILA was built to bridge the massive gap between simple conversational chatbots and fully autonomous, local-first OS Agents. The objective was to create a highly intelligent entity capable of securely managing a local Windows workstation environment, completely offline if necessary, without the friction, slow response times, and context amnesia typical of standard LLM wrappers. 
