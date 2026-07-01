@@ -2,6 +2,10 @@
 
 *This is the official project reference, technical gospel, and complete engineering encyclopedia for LAILA AI. Every architectural decision, historical modification, database schema, and core philosophy is documented here. A year from now, this document will serve as the master key to understanding exactly **why** the system behaves the way it does, preventing the need to dig through Git commits.*
 
+> "LAILA is not powerful because of the model behind her. She's powerful because of the system around her. The model thinks. The system remembers, acts, observes, and adapts. Together, they become intelligent."
+
+> "Don't make the model work harder. Build a system that lets the model think better."
+
 ---
 
 ## 📑 Table of Contents
