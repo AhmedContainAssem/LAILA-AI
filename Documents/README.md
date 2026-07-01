@@ -1,4 +1,5 @@
 # 🚀 Layla AI
+An AI Systems Platform designed for reliable reasoning, safe execution, and efficient local intelligence.
 
 > "LAILA is not powerful because of the model behind her. She's powerful because of the system around her. The model thinks. The system remembers, acts, observes, and adapts. Together, they become intelligent."
 
