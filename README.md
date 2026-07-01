@@ -1,8 +1,3 @@
-# LAILA-AI
-HAND_BOOK
-
-
-
 # 📖 LAILA AI: The Official Architecture & Engineering Handbook
 
 *This is the official project reference, technical gospel, and complete engineering encyclopedia for LAILA AI. Every architectural decision, historical modification, database schema, and core philosophy is documented here. A year from now, this document will serve as the master key to understanding exactly **why** the system behaves the way it does, preventing the need to dig through Git commits.*
@@ -42,6 +37,9 @@ She thinks, reasons, and delegates tasks to specialized "Pilots" (SystemPilot, D
 *   **Absolute Grounding:** Zero tolerance for hallucinated evidence. If a tool did not run, LAILA cannot say it ran.
 *   **Resource Respect:** 0% CPU/GPU usage when idle, strict context token budgets when active.
 *   **Observability:** Complete transparency into the system's thought process, state, and resource consumption via the telemetry dashboard.
+
+### 1.5 Product Demonstrations
+For visual overviews and short video demonstrations of the LAILA product in action, please visit the [Featured Section on LinkedIn](https://www.linkedin.com/in/ahmed-assem-874bb4400/details/featured/).
 
 ---
 
