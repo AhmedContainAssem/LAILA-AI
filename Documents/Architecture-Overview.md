@@ -1,6 +1,6 @@
 # 🏗️ High-Level Architecture
 
-LAILA is a modular, event-driven local web application utilizing a proprietary dual-stage cognitive pipeline.
+LAILA is a modular, event-driven local 
 
 ## 1. The Components
 
