@@ -1,6 +1,6 @@
 # 📖 LAILA AI: Engineering Overview
 
-*This document provides a high-level overview of the engineering principles and design decisions behind LAILA AI, showcasing the system's robustness while protecting proprietary implementation details.*
+*This repository intentionally provides a high-level engineering overview of the system architecture.*
 
 ## 1. Core Engineering Decisions
 
