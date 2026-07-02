@@ -1,4 +1,4 @@
-# 🚀 Laila AI
+# 🚀 LAILA AI
 
 > "LAILA is not powerful because of the model behind her. She's powerful because of the system around her. The model thinks. The system remembers, acts, observes, and adapts. Together, they become intelligent."
 
