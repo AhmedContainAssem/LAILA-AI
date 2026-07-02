@@ -1,10 +1,10 @@
-# 🚀 Layla AI
+# 🚀 Laila AI
 
 > "LAILA is not powerful because of the model behind her. She's powerful because of the system around her. The model thinks. The system remembers, acts, observes, and adapts. Together, they become intelligent."
 
 > "Don't make the model work harder. Build a system that lets the model think better."
 
-## 🚀 What is Layla?
+## 🚀 What is Laila?
 LAILA is an advanced, autonomous, local-first OS Agent. Built to transcend the limitations of simple conversational chatbots, LAILA securely manages local Windows workstation environments. She operates offline, eliminating the friction, slow response times, and context amnesia typical of standard LLM wrappers.
 
 ## ⚡ Features
