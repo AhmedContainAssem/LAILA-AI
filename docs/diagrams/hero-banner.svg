@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="50%" stop-color="#0A1526"/>
+      <stop offset="100%" stop-color="#050B14"/>
+    </linearGradient>
+
+    <!-- Header Gradient Banner -->
+    <linearGradient id="bannerGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7928CA"/>
+      <stop offset="50%" stop-color="#00B4FF"/>
+      <stop offset="100%" stop-color="#00F5A0"/>
+    </linearGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#101D33"/>
+      <stop offset="100%" stop-color="#091222"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .title-text { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-weight: 900; font-size: 42px; fill: #FFFFFF; letter-spacing: 2px; }
+    .subtitle-text { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-weight: 500; font-size: 16px; fill: #94A3B8; letter-spacing: 1px; }
+    .badge-text { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 1.5px; text-anchor: middle; }
+    .card-title { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-weight: 700; font-size: 15px; fill: #FFFFFF; }
+    .card-desc { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-weight: 400; font-size: 12px; fill: #64748B; }
+  </style>
+
+  <!-- Container Box -->
+  <rect width="1200" height="320" rx="20" fill="url(#heroBg)" stroke="#1E293B" stroke-width="2"/>
+
+  <!-- Top Curved Gradient Strip -->
+  <path d="M 0 20 Q 600 70 1200 20 L 1200 0 L 0 0 Z" fill="url(#bannerGlow)" opacity="0.3"/>
+  <line x1="0" y1="2" x2="1200" y2="2" stroke="url(#bannerGlow)" stroke-width="4" filter="url(#neonGlow)"/>
+
+  <!-- Header Badge -->
+  <rect x="490" y="30" width="220" height="26" rx="13" fill="#0A2540" stroke="#00B4FF" stroke-width="1.5"/>
+  <text x="600" y="47" class="badge-text">AUTONOMOUS OS WORKSTATION</text>
+
+  <!-- Main Title -->
+  <text x="600" y="105" text-anchor="middle" class="title-text">⚡ LAILA AI PLATFORM ⚡</text>
+  <text x="600" y="132" text-anchor="middle" class="subtitle-text">Dual-Stage Cognitive Pipeline · Grounded OS Pilots · Zero-Idle Hardware Intelligence</text>
+
+  <!-- 4 Core Showcase Cards -->
+  <!-- Card 1: SystemPilot -->
+  <g transform="translate(45, 160)">
+    <rect width="255" height="125" rx="14" fill="url(#cardGrad)" stroke="#00B4FF" stroke-width="1.5" stroke-opacity="0.6"/>
+    <circle cx="36" cy="38" r="18" fill="#0A2540"/>
+    <text x="36" y="44" font-size="18" text-anchor="middle" fill="#00B4FF">💻</text>
+    <text x="68" y="42" class="card-title">SystemPilot</text>
+    <text x="20" y="80" class="card-desc">Deterministic OS filesystem automation &amp; file mutation.</text>
+    <rect x="20" y="105" width="60" height="4" rx="2" fill="#00B4FF"/>
+  </g>
+
+  <!-- Card 2: DocumentPilot -->
+  <g transform="translate(325, 160)">
+    <rect width="255" height="125" rx="14" fill="url(#cardGrad)" stroke="#FF007A" stroke-width="1.5" stroke-opacity="0.6"/>
+    <circle cx="36" cy="38" r="18" fill="#3D0A24"/>
+    <text x="36" y="44" font-size="18" text-anchor="middle" fill="#FF007A">📄</text>
+    <text x="68" y="42" class="card-title">DocumentPilot</text>
+    <text x="20" y="80" class="card-desc">Bilingual multi-format conversions (DOCX, PDF, XLSX).</text>
+    <rect x="20" y="105" width="60" height="4" rx="2" fill="#FF007A"/>
+  </g>
+
+  <!-- Card 3: Claim Verifier -->
+  <g transform="translate(605, 160)">
+    <rect width="255" height="125" rx="14" fill="url(#cardGrad)" stroke="#00F5A0" stroke-width="1.5" stroke-opacity="0.6"/>
+    <circle cx="36" cy="38" r="18" fill="#0A3324"/>
+    <text x="36" y="44" font-size="18" text-anchor="middle" fill="#00F5A0">🛡️</text>
+    <text x="68" y="42" class="card-title">Claim Verifier</text>
+    <text x="20" y="80" class="card-desc">Zero-ghost evidence grounding &amp; objective audit guards.</text>
+    <rect x="20" y="105" width="60" height="4" rx="2" fill="#00F5A0"/>
+  </g>
+
+  <!-- Card 4: Resilient LLM Engine -->
+  <g transform="translate(885, 160)">
+    <rect width="270" height="125" rx="14" fill="url(#cardGrad)" stroke="#9D4EDD" stroke-width="1.5" stroke-opacity="0.6"/>
+    <circle cx="36" cy="38" r="18" fill="#290E45"/>
+    <text x="36" y="44" font-size="18" text-anchor="middle" fill="#9D4EDD">⚡</text>
+    <text x="68" y="42" class="card-title">Resilient Engine</text>
+    <text x="20" y="80" class="card-desc">Local Gemma-3 offline with &lt;1.5s cloud failover circuit breaker.</text>
+    <rect x="20" y="105" width="60" height="4" rx="2" fill="#9D4EDD"/>
+  </g>
+</svg>

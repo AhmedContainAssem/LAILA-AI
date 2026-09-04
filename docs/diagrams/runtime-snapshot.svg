@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="snapBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .th-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 12px; fill: #00B4FF; letter-spacing: 1px; }
+    .td-dim { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 13px; fill: #FFFFFF; }
+    .td-impl { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 500; font-size: 12px; fill: #94A3B8; }
+    .badge-p { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; text-anchor: middle; }
+  </style>
+
+  <rect width="1200" height="320" rx="16" fill="url(#snapBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-t">CORE SPECIFICATIONS</text>
+  <text x="600" y="58" class="sec-t">📊 RUNTIME ARCHITECTURE SNAPSHOT</text>
+
+  <!-- Table Container Card -->
+  <rect x="40" y="80" width="1120" height="215" rx="12" fill="#0A1220" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Header Row -->
+  <rect x="40" y="80" width="1120" height="36" rx="12" fill="#0F1B2E"/>
+  <text x="70" y="103" class="th-t">DIMENSION</text>
+  <text x="420" y="103" class="th-t">RUNTIME IMPLEMENTATION</text>
+  <text x="960" y="103" class="th-t">OPERATIONAL STATUS</text>
+
+  <!-- Row 1: Cognitive Pipeline -->
+  <g transform="translate(40, 116)">
+    <line x1="0" y1="36" x2="1120" y2="36" stroke="#1E293B" stroke-width="0.8"/>
+    <text x="30" y="24" class="td-dim">🧠 Cognitive Decoupling</text>
+    <text x="380" y="24" class="td-impl">Reasoning-Action Dual Pipeline (Fast Synthesizer vs Pilot OS Tools)</text>
+    <rect x="910" y="10" width="160" height="20" rx="10" fill="#0A3324" stroke="#00F5A0" stroke-width="1"/>
+    <text x="990" y="24" fill="#00F5A0" class="badge-p">ZERO GHOST ACTION</text>
+  </g>
+
+  <!-- Row 2: Inference Engine -->
+  <g transform="translate(40, 152)">
+    <line x1="0" y1="36" x2="1120" y2="36" stroke="#1E293B" stroke-width="0.8"/>
+    <text x="30" y="24" class="td-dim">⚡ Local &amp; Cloud Inference</text>
+    <text x="380" y="24" class="td-impl">Ollama Gemma-3 4B CPU-first + Google Gemini 2.0 Flash / OpenRouter</text>
+    <rect x="910" y="10" width="160" height="20" rx="10" fill="#0A2540" stroke="#00B4FF" stroke-width="1"/>
+    <text x="990" y="24" fill="#00B4FF" class="badge-p">&lt;1.5s FAILOVER GATE</text>
+  </g>
+
+  <!-- Row 3: Desktop Shell -->
+  <g transform="translate(40, 188)">
+    <line x1="0" y1="36" x2="1120" y2="36" stroke="#1E293B" stroke-width="0.8"/>
+    <text x="30" y="24" class="td-dim">🖥️ Desktop Supervisor</text>
+    <text x="380" y="24" class="td-impl">Native WebView2 Shell (LAILA.exe) with /health readiness FSM probes</text>
+    <rect x="910" y="10" width="160" height="20" rx="10" fill="#290E45" stroke="#9D4EDD" stroke-width="1"/>
+    <text x="990" y="24" fill="#9D4EDD" class="badge-p">0.48s BOOT TIME</text>
+  </g>
+
+  <!-- Row 4: Memory & Identity -->
+  <g transform="translate(40, 224)">
+    <text x="30" y="24" class="td-dim">💾 Memory &amp; Identity Hygiene</text>
+    <text x="380" y="24" class="td-impl">Symmetric History Truncation + RLock SQLite Session Purge</text>
+    <rect x="910" y="10" width="160" height="20" rx="10" fill="#3D0A24" stroke="#FF007A" stroke-width="1"/>
+    <text x="990" y="24" fill="#FF007A" class="badge-p">ZERO PERSONA DRIFT</text>
+  </g>
+</svg>

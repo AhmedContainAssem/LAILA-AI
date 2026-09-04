@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pilotBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-p { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-p { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .pilot-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 15px; fill: #FFFFFF; }
+    .feat-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 12px; fill: #FFFFFF; }
+    .feat-d { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 400; font-size: 11px; fill: #94A3B8; }
+  </style>
+
+  <rect width="1200" height="360" rx="16" fill="url(#pilotBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-p">DETERMINISTIC WORKSTATION AUTOMATION</text>
+  <text x="600" y="58" class="sec-p">🛠️ SYSTEMPILOT &amp; DOCUMENTPILOT (MODULAR 4-ENGINE SUITE)</text>
+
+  <!-- Left Card: SystemPilot -->
+  <g transform="translate(45, 80)">
+    <rect width="525" height="250" rx="12" fill="#0A1526" stroke="#00B4FF" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#0A2540"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">💻</text>
+    <text x="65" y="35" class="pilot-title">SystemPilot (OS &amp; Drive Primitives)</text>
+    <text x="65" y="49" font-size="10" fill="#00B4FF" font-family="'Segoe UI', sans-serif">NATIVE PYTHON OS CONTROL · ZERO SHELL CORRUPTION</text>
+
+    <!-- Features -->
+    <g transform="translate(20, 68)">
+      <rect width="485" height="38" rx="6" fill="#060C17"/>
+      <text x="15" y="23" class="feat-t">1. Native File I/O:</text>
+      <text x="135" y="23" class="feat-d">Robust UTF-8 file creation, editing, inspection &amp; deletion.</text>
+
+      <rect y="46" width="485" height="38" rx="6" fill="#060C17"/>
+      <text x="15" y="69" class="feat-t">2. Destructive Guard:</text>
+      <text x="155" y="69" class="feat-d">Wildcard filter protection &amp; mandatory bulk delete confirmation.</text>
+
+      <rect y="92" width="485" height="38" rx="6" fill="#060C17"/>
+      <text x="15" y="115" class="feat-t">3. Path Normalizer:</text>
+      <text x="150" y="115" class="feat-d">Cross-drive path mapping (J:\, E:\, C:\) across environments.</text>
+
+      <rect y="138" width="485" height="30" rx="6" fill="#060C17"/>
+      <text x="15" y="157" class="feat-t">4. Clipboard &amp; Apps:</text>
+      <text x="150" y="157" class="feat-d">Instant clipboard synthesis &amp; deterministic app launcher.</text>
+    </g>
+  </g>
+
+  <!-- Right Card: DocumentPilot Modular Suite -->
+  <g transform="translate(630, 80)">
+    <rect width="525" height="250" rx="12" fill="#0A1526" stroke="#FF007A" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#3D0A24"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">🛡️</text>
+    <text x="65" y="35" class="pilot-title">DocumentPilot (Modular Micro-Engines)</text>
+    <text x="65" y="49" font-size="10" fill="#FF007A" font-family="'Segoe UI', sans-serif">100% SEPARATION OF CONCERNS · BILINGUAL SUITE</text>
+
+    <!-- Features -->
+    <g transform="translate(20, 68)">
+      <rect width="485" height="38" rx="6" fill="#060C17"/>
+      <text x="15" y="23" class="feat-t">1. MediaEngine 🎨:</text>
+      <text x="140" y="23" class="feat-d">PNG, JPG, WebP, ICO, BMP, TIFF, PSD, SVG vector embedding.</text>
+
+      <rect y="46" width="485" height="38" rx="6" fill="#060C17"/>
+      <text x="15" y="69" class="feat-t">2. PDF Surgical 📄:</text>
+      <text x="140" y="69" class="feat-d">Merge, Split, Rotate (90/180/270°), Page Deletion &amp; Keyword Search.</text>
+
+      <rect y="92" width="485" height="38" rx="6" fill="#060C17"/>
+      <text x="15" y="115" class="feat-t">3. Office &amp; Tables 📊:</text>
+      <text x="145" y="115" class="feat-d">DOCX ➔ PDF offline fallback, CSV ➔ Excel, and table extract.</text>
+
+      <rect y="138" width="485" height="30" rx="6" fill="#060C17"/>
+      <text x="15" y="157" class="feat-t">4. Text &amp; Markdown 📝:</text>
+      <text x="165" y="157" class="feat-d">Smart word-wrap, Arabic RTL Bidi &amp; Multi-Encoding auto-detect.</text>
+    </g>
+  </g>
+</svg>

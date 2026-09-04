@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="winBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#09111F"/>
+    </linearGradient>
+    <linearGradient id="streamCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1C33"/>
+      <stop offset="100%" stop-color="#061224"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-w { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-w { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .nav-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 600; font-size: 11px; fill: #94A3B8; }
+    .chat-user { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 600; font-size: 12px; fill: #FFFFFF; }
+    .chat-laila { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 500; font-size: 12px; fill: #CBD5E1; }
+    .tele-val { font-family: 'JetBrains Mono', 'Segoe UI Mono', monospace; font-size: 11px; fill: #00F5A0; }
+  </style>
+
+  <rect width="1200" height="480" rx="16" fill="url(#winBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="30" class="cat-w">WORKSTATION INTERFACE &amp; OBSERVABILITY</text>
+  <text x="600" y="54" class="sec-w">💻 LAILA Native Desktop Shell (WebView2) &amp; Live Telemetry</text>
+
+  <!-- Main Window Frame -->
+  <g transform="translate(60, 75)">
+    <rect width="1080" height="375" rx="12" fill="#070E1A" stroke="#1E293B" stroke-width="1.5"/>
+
+    <!-- Window Titlebar -->
+    <rect width="1080" height="34" rx="12" fill="#0A1526"/>
+    <!-- Mac Dots -->
+    <circle cx="20" cy="17" r="5" fill="#EF4444"/>
+    <circle cx="36" cy="17" r="5" fill="#F59E0B"/>
+    <circle cx="52" cy="17" r="5" fill="#10B981"/>
+
+    <!-- URL Bar -->
+    <rect x="240" y="7" width="600" height="20" rx="10" fill="#050B14" stroke="#1E293B" stroke-width="1"/>
+    <text x="540" y="21" class="nav-t" text-anchor="middle">🔒 http://127.0.0.1:3000 — LAILA OS Agent (v2.0.0-Beta)</text>
+
+    <!-- Top Right Badges -->
+    <rect x="870" y="7" width="90" height="20" rx="6" fill="#0A3324" stroke="#00F5A0" stroke-width="1"/>
+    <text x="915" y="21" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700" fill="#00F5A0" text-anchor="middle">ONLINE (200)</text>
+
+    <rect x="970" y="7" width="90" height="20" rx="6" fill="#0A2540" stroke="#00B4FF" stroke-width="1"/>
+    <text x="1015" y="21" font-family="'Segoe UI', sans-serif" font-size="10" font-weight="700" fill="#00B4FF" text-anchor="middle">PORT 3000</text>
+
+    <!-- Left Chat Area -->
+    <g transform="translate(20, 50)">
+      <rect width="680" height="305" rx="10" fill="#050A14" stroke="#132035" stroke-width="1"/>
+
+      <!-- User Message -->
+      <g transform="translate(20, 15)">
+        <rect x="250" y="0" width="390" height="35" rx="10" fill="#0A2540" stroke="#00B4FF" stroke-width="0.8"/>
+        <text x="270" y="22" class="chat-user">يا ليلى، حولي كل ملفات DOCX في E:\Reports إلى PDF</text>
+      </g>
+
+      <!-- Pilot Tool Invocation Pill -->
+      <g transform="translate(20, 60)">
+        <rect x="15" y="0" width="480" height="32" rx="8" fill="#1A1505" stroke="#FFB703" stroke-width="0.8"/>
+        <text x="30" y="21" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#FFB703">⚡ DocumentPilot: convert_docx_to_pdf("E:\Reports") [SUCCESS: 12 Files]</text>
+      </g>
+
+      <!-- Laila Stream Response -->
+      <g transform="translate(20, 102)">
+        <rect x="15" y="0" width="620" height="110" rx="10" fill="url(#streamCard)" stroke="#00B4FF" stroke-width="1"/>
+        <text x="35" y="28" font-family="'Segoe UI', sans-serif" font-size="12" font-weight="800" fill="#00B4FF">ليلى (LAILA AI):</text>
+        <text x="35" y="52" class="chat-laila">تم تحويل جميع ملفات التقارير الـ 12 بنجاح إلى صيغة PDF في مسار E:\Reports ✅</text>
+        <text x="35" y="74" class="chat-laila">حافظت على نفس تنسيق الجداول والخطوط العربية، والملفات جاهزة للمعاينة الآن.</text>
+        <rect x="35" y="90" width="120" height="12" rx="6" fill="#00F5A0" fill-opacity="0.2"/>
+        <text x="95" y="99" font-size="9" fill="#00F5A0" font-weight="700" text-anchor="middle">CLAIM VERIFIED ✓</text>
+      </g>
+
+      <!-- Chat Input Field -->
+      <g transform="translate(20, 245)">
+        <rect x="15" y="0" width="620" height="42" rx="8" fill="#0A1526" stroke="#1E293B" stroke-width="1"/>
+        <text x="35" y="26" font-family="'Segoe UI', sans-serif" font-size="12" fill="#64748B">اكتب أمرك أو استفسارك هنا...</text>
+        <circle cx="615" cy="21" r="14" fill="#00B4FF"/>
+        <text x="615" y="26" font-size="12" fill="#FFFFFF" text-anchor="middle">➤</text>
+      </g>
+    </g>
+
+    <!-- Right Telemetry & State Panel -->
+    <g transform="translate(720, 50)">
+      <rect width="340" height="305" rx="10" fill="#050A14" stroke="#132035" stroke-width="1"/>
+      <rect width="340" height="32" rx="10" fill="#0D1A2E"/>
+      <text x="20" y="21" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="800" fill="#00B4FF">📊 REAL-TIME TELEMETRY</text>
+
+      <g transform="translate(20, 45)">
+        <text x="0" y="15" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Active Mode:</text>
+        <text x="180" y="15" class="tele-val" fill="#00B4FF">AGENT (AUTONOMOUS)</text>
+
+        <text x="0" y="42" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Time-To-First-Token:</text>
+        <text x="180" y="42" class="tele-val">1.38s (STREAMING)</text>
+
+        <text x="0" y="69" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Active Model:</text>
+        <text x="180" y="69" class="tele-val" fill="#9D4EDD">Gemini 2.0 Flash</text>
+
+        <text x="0" y="96" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Active User Identity:</text>
+        <text x="180" y="96" class="tele-val" fill="#FF007A">Midoo (Engineer)</text>
+
+        <text x="0" y="123" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Idle CPU Footprint:</text>
+        <text x="180" y="123" class="tele-val">0.0% (STANDBY)</text>
+
+        <text x="0" y="150" font-family="'Segoe UI', sans-serif" font-size="11" fill="#94A3B8">Grounding Integrity:</text>
+        <text x="180" y="150" class="tele-val">100% AUDITED</text>
+      </g>
+
+      <!-- Terminal Trace Box -->
+      <g transform="translate(15, 210)">
+        <rect width="310" height="80" rx="6" fill="#000000" stroke="#1E293B" stroke-width="1"/>
+        <text x="12" y="18" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00F5A0">[SYSTEM] POST /api/user/profile 200 OK</text>
+        <text x="12" y="34" font-family="'JetBrains Mono', monospace" font-size="9" fill="#00B4FF">[PILOT] DocumentPilot converted 12 files</text>
+        <text x="12" y="50" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94A3B8">[CLAIM] Verified: Output files exist on disk</text>
+        <text x="12" y="66" font-family="'JetBrains Mono', monospace" font-size="9" fill="#F59E0B">[STREAM] 184 tokens flushed in 1.4s</text>
+      </g>
+    </g>
+  </g>
+</svg>

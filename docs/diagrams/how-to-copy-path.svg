@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="copyPathBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-cp { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-cp { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .step-card-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 14px; fill: #FFFFFF; }
+    .step-badge { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 10px; }
+    .step-desc { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 400; font-size: 11px; fill: #94A3B8; }
+    .key-badge { font-family: monospace; font-weight: 700; font-size: 11px; fill: #00F5A0; }
+  </style>
+
+  <rect width="1200" height="380" rx="16" fill="url(#copyPathBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-cp">WINDOWS WORKSTATION PRODUCTIVITY TIP</text>
+  <text x="600" y="60" class="sec-cp">💡 HOW TO COPY ANY FILE OR FOLDER PATH INSTANTLY</text>
+  <text x="600" y="84" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">Use exact file paths inside quotes in your commands for 100% deterministic execution</text>
+
+  <!-- Step 1: Right Click Copy as Path -->
+  <g transform="translate(45, 110)">
+    <rect width="355" height="230" rx="12" fill="#0A1526" stroke="#00B4FF" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#0A2540"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">🖱️</text>
+    <text x="65" y="30" class="step-card-t">Method 1: Right-Click Menu</text>
+    <text x="65" y="46" class="step-badge" fill="#00B4FF">WINDOWS 11 / 10 CONTEXT MENU</text>
+    <line x1="20" y1="62" x2="335" y2="62" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 80)">
+      <text y="0" font-weight="700" font-size="11" fill="#FFFFFF">1. Right-click any file in Explorer.</text>
+      <text y="22" font-weight="700" font-size="11" fill="#FFFFFF">2. Select:</text>
+      <rect x="58" y="8" width="130" height="20" rx="4" fill="rgba(0,180,255,0.15)" stroke="#00B4FF" stroke-width="0.8"/>
+      <text x="65" y="22" font-size="10" fill="#00B4FF" font-weight="700">"Copy as path"</text>
+      <text y="48" class="step-desc">Automatically copies path in quotes.</text>
+      <text y="70" class="step-desc">Paste directly into LAILA's chat!</text>
+    </g>
+  </g>
+
+  <!-- Step 2: Keyboard Shortcut (Ctrl+Shift+C) -->
+  <g transform="translate(422, 110)">
+    <rect width="355" height="230" rx="12" fill="#0A1526" stroke="#00F5A0" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#0A3326"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">⚡</text>
+    <text x="65" y="30" class="step-card-t">Method 2: Super Hotkey</text>
+    <text x="65" y="46" class="step-badge" fill="#00F5A0">INSTANT 1-KEYPRESS CAPTURE</text>
+    <line x1="20" y1="62" x2="335" y2="62" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 80)">
+      <text y="0" font-weight="700" font-size="11" fill="#FFFFFF">1. Click on any file once.</text>
+      <text y="24" font-weight="700" font-size="11" fill="#FFFFFF">2. Press Hotkey:</text>
+      <rect x="95" y="10" width="125" height="20" rx="4" fill="rgba(0,245,160,0.15)" stroke="#00F5A0" stroke-width="0.8"/>
+      <text x="102" y="24" class="key-badge">Ctrl + Shift + C</text>
+      <text y="50" class="step-desc">Windows 11 copies path to clipboard.</text>
+      <text y="72" class="step-desc">Fastest way for power users!</text>
+    </g>
+  </g>
+
+  <!-- Step 3: Address Bar Copy -->
+  <g transform="translate(800, 110)">
+    <rect width="355" height="230" rx="12" fill="#0A1526" stroke="#FF007A" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#3D0A24"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">📂</text>
+    <text x="65" y="30" class="step-card-t">Method 3: Address Bar</text>
+    <text x="65" y="46" class="step-badge" fill="#FF007A">FOR FULL FOLDERS &amp; DIRECTORIES</text>
+    <line x1="20" y1="62" x2="335" y2="62" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 80)">
+      <text y="0" font-weight="700" font-size="11" fill="#FFFFFF">1. Open folder in File Explorer.</text>
+      <text y="24" font-weight="700" font-size="11" fill="#FFFFFF">2. Click top address bar.</text>
+      <rect x="135" y="10" width="70" height="20" rx="4" fill="rgba(255,0,122,0.15)" stroke="#FF007A" stroke-width="0.8"/>
+      <text x="142" y="24" font-family="monospace" font-weight="700" font-size="10.5" fill="#FF007A">Ctrl + C</text>
+      <text y="50" class="step-desc">Copies folder directory path.</text>
+      <text y="72" class="step-desc">Ideal for listing or batch processing!</text>
+    </g>
+  </g>
+</svg>

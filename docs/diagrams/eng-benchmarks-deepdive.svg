@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="benchBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-b { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-b { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .metric-val { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 900; font-size: 24px; fill: #00F5A0; text-anchor: middle; }
+    .metric-lbl { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 11px; fill: #FFFFFF; text-anchor: middle; }
+    .metric-sub { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 400; font-size: 9.5px; fill: #94A3B8; text-anchor: middle; }
+    .bench-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 13px; fill: #FFFFFF; }
+    .bench-desc { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 400; font-size: 10.5px; fill: #94A3B8; }
+  </style>
+
+  <rect width="1200" height="480" rx="16" fill="url(#benchBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-b">HARDWARE EFFICIENCY &amp; RUNTIME BENCHMARKS</text>
+  <text x="600" y="60" class="sec-b">📊 PRODUCTION TELEMETRY &amp; HARDWARE SPECS</text>
+
+  <!-- 4 Top Metric Cards -->
+  <g transform="translate(45, 80)">
+    <!-- Metric 1 -->
+    <rect width="260" height="85" rx="10" fill="#0A1526" stroke="#00B4FF" stroke-width="1"/>
+    <text x="130" y="38" class="metric-val" fill="#00B4FF">0%</text>
+    <text x="130" y="58" class="metric-lbl">IDLE CPU / GPU USAGE</text>
+    <text x="130" y="72" class="metric-sub">Zero battery or heat drain</text>
+
+    <!-- Metric 2 -->
+    <g transform="translate(285, 0)">
+      <rect width="260" height="85" rx="10" fill="#0A1526" stroke="#00F5A0" stroke-width="1"/>
+      <text x="130" y="38" class="metric-val" fill="#00F5A0">&lt; 1.5s</text>
+      <text x="130" y="58" class="metric-lbl">TIME TO FIRST TOKEN (TTFT)</text>
+      <text x="130" y="72" class="metric-sub">Streaming token latency</text>
+    </g>
+
+    <!-- Metric 3 -->
+    <g transform="translate(570, 0)">
+      <rect width="260" height="85" rx="10" fill="#0A1526" stroke="#FF007A" stroke-width="1"/>
+      <text x="130" y="38" class="metric-val" fill="#FF007A">0.48s</text>
+      <text x="130" y="58" class="metric-lbl">DESKTOP SUPERVISOR BOOT</text>
+      <text x="130" y="72" class="metric-sub">Instant /health readiness probe</text>
+    </g>
+
+    <!-- Metric 4 -->
+    <g transform="translate(855, 0)">
+      <rect width="255" height="85" rx="10" fill="#0A1526" stroke="#9D4EDD" stroke-width="1"/>
+      <text x="127" y="38" class="metric-val" fill="#9D4EDD">&lt; 250 MB</text>
+      <text x="127" y="58" class="metric-lbl">BASELINE RAM FOOTPRINT</text>
+      <text x="127" y="72" class="metric-sub">5x lighter than Electron apps</text>
+    </g>
+  </g>
+
+  <!-- 3 Deep-Dive Cards Below -->
+  <g transform="translate(45, 185)">
+    <!-- Left Card -->
+    <rect width="355" height="265" rx="12" fill="#0A1526" stroke="#1E293B" stroke-width="1.2"/>
+    <text x="25" y="35" class="bench-title" fill="#00B4FF">⚡ Dual-Stage Decoupled Pipeline</text>
+    <line x1="20" y1="48" x2="335" y2="48" stroke="#1E293B" stroke-width="1"/>
+    <g transform="translate(20, 68)">
+      <text y="0" font-weight="700" font-size="11" fill="#FFFFFF">Stage 1 Execution:</text>
+      <text y="16" class="bench-desc">Python native deterministic pilots run with &lt;10ms latency.</text>
+      <text y="44" font-weight="700" font-size="11" fill="#FFFFFF">Stage 2 Synthesis:</text>
+      <text y="60" class="bench-desc">Grounded prompt assembly sends verified facts to model.</text>
+      <text y="88" font-weight="700" font-size="11" fill="#FFFFFF">Zero Tool Pollution:</text>
+      <text y="104" class="bench-desc">Prevents JSON parser breakdowns and token hallucination.</text>
+    </g>
+
+    <!-- Middle Card -->
+    <g transform="translate(378, 0)">
+      <rect width="355" height="265" rx="12" fill="#0A1526" stroke="#1E293B" stroke-width="1.2"/>
+      <text x="25" y="35" class="bench-title" fill="#00F5A0">🛡️ Zero-Ghost Grounding Architecture</text>
+      <line x1="20" y1="48" x2="335" y2="48" stroke="#1E293B" stroke-width="1"/>
+      <g transform="translate(20, 68)">
+        <text y="0" font-weight="700" font-size="11" fill="#FFFFFF">Claim Verifier Guard:</text>
+        <text y="16" class="bench-desc">Audits actual disk presence and checksums after every action.</text>
+        <text y="44" font-weight="700" font-size="11" fill="#FFFFFF">Destructive Guardrails:</text>
+        <text y="60" class="bench-desc">Requires mandatory bulk confirmation before mass operations.</text>
+        <text y="88" font-weight="700" font-size="11" fill="#FFFFFF">Audit Ledger:</text>
+        <text y="104" class="bench-desc">Immutable SQLite commit log with full operation traceability.</text>
+      </g>
+    </g>
+
+    <!-- Right Card -->
+    <g transform="translate(755, 0)">
+      <rect width="355" height="265" rx="12" fill="#0A1526" stroke="#1E293B" stroke-width="1.2"/>
+      <text x="25" y="35" class="bench-title" fill="#FF007A">🚀 Standalone Runtime Distribution</text>
+      <line x1="20" y1="48" x2="335" y2="48" stroke="#1E293B" stroke-width="1"/>
+      <g transform="translate(20, 68)">
+        <text y="0" font-weight="700" font-size="11" fill="#FFFFFF">WebView2 Supervisor FSM:</text>
+        <text y="16" class="bench-desc">Non-blocking /health polling boots frontend seamlessly.</text>
+        <text y="44" font-weight="700" font-size="11" fill="#FFFFFF">Multi-Threaded Server:</text>
+        <text y="60" class="bench-desc">Threaded Flask backend handles concurrent SSE streams.</text>
+        <text y="88" font-weight="700" font-size="11" fill="#FFFFFF">Self-Contained Bundle:</text>
+        <text y="104" class="bench-desc">Zero external Python setup required for end users.</text>
+      </g>
+    </g>
+  </g>
+</svg>

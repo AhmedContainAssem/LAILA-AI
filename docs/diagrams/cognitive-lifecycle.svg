@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <linearGradient id="lifeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+    <linearGradient id="cGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B4FF"/>
+      <stop offset="100%" stop-color="#0077B6"/>
+    </linearGradient>
+    <linearGradient id="cGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF007A"/>
+      <stop offset="100%" stop-color="#B5179E"/>
+    </linearGradient>
+    <linearGradient id="cGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5A0"/>
+      <stop offset="100%" stop-color="#0096C7"/>
+    </linearGradient>
+    <linearGradient id="cGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9D4EDD"/>
+      <stop offset="100%" stop-color="#7209B7"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-l { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-l { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .step-num { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 900; font-size: 18px; fill: #FFFFFF; text-anchor: middle; }
+    .step-h { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 13px; fill: #FFFFFF; text-anchor: middle; }
+    .step-p { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 500; font-size: 10px; fill: #94A3B8; text-anchor: middle; }
+  </style>
+
+  <rect width="1200" height="300" rx="16" fill="url(#lifeBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-l">COGNITIVE PIPELINE LIFECYCLE</text>
+  <text x="600" y="58" class="sec-l">🔄 Autonomous Ingestion, Execution &amp; Grounding Cycle</text>
+
+  <!-- Connectors -->
+  <line x1="220" y1="140" x2="380" y2="140" stroke="#00B4FF" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="385,140 375,135 375,145" fill="#00B4FF"/>
+
+  <line x1="490" y1="140" x2="670" y2="140" stroke="#FF007A" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="675,140 665,135 665,145" fill="#FF007A"/>
+
+  <line x1="770" y1="140" x2="950" y2="140" stroke="#00F5A0" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="955,140 945,135 945,145" fill="#00F5A0"/>
+
+  <!-- Return Loop -->
+  <path d="M 1005 180 Q 600 270 165 180" fill="none" stroke="#9D4EDD" stroke-width="2" stroke-dasharray="6,4"/>
+  <polygon points="160,175 170,170 170,180" fill="#9D4EDD"/>
+  <text x="600" y="245" font-family="'Segoe UI', Inter, sans-serif" font-size="11" fill="#9D4EDD" font-weight="700" text-anchor="middle">Continuous Grounded State &amp; SQLite Session Retention</text>
+
+  <!-- Circle Step 1 -->
+  <g transform="translate(165, 140)">
+    <circle cx="0" cy="0" r="45" fill="#081426" stroke="#00B4FF" stroke-width="2"/>
+    <circle cx="0" cy="-12" r="18" fill="url(#cGrad1)"/>
+    <text x="0" y="-6" class="step-num">1</text>
+    <text x="0" y="16" class="step-h">INGESTION</text>
+    <text x="0" y="28" class="step-p">Semantic Intent Router</text>
+  </g>
+
+  <!-- Circle Step 2 -->
+  <g transform="translate(435, 140)">
+    <circle cx="0" cy="0" r="45" fill="#1C0514" stroke="#FF007A" stroke-width="2"/>
+    <circle cx="0" cy="-12" r="18" fill="url(#cGrad2)"/>
+    <text x="0" y="-6" class="step-num">2</text>
+    <text x="0" y="16" class="step-h">PILOT ACTION</text>
+    <text x="0" y="28" class="step-p">OS &amp; Doc Primitives</text>
+  </g>
+
+  <!-- Circle Step 3 -->
+  <g transform="translate(720, 140)">
+    <circle cx="0" cy="0" r="45" fill="#051C14" stroke="#00F5A0" stroke-width="2"/>
+    <circle cx="0" cy="-12" r="18" fill="url(#cGrad3)"/>
+    <text x="0" y="-6" class="step-num">3</text>
+    <text x="0" y="16" class="step-h">VERIFICATION</text>
+    <text x="0" y="28" class="step-p">Claim Grounding Guard</text>
+  </g>
+
+  <!-- Circle Step 4 -->
+  <g transform="translate(1005, 140)">
+    <circle cx="0" cy="0" r="45" fill="#140824" stroke="#9D4EDD" stroke-width="2"/>
+    <circle cx="0" cy="-12" r="18" fill="url(#cGrad4)"/>
+    <text x="0" y="-6" class="step-num">4</text>
+    <text x="0" y="16" class="step-h">STREAMING</text>
+    <text x="0" y="28" class="step-p">Audited Telemetry</text>
+  </g>
+</svg>

@@ -1,25 +1,94 @@
-# 📖 LAILA AI: Engineering Overview
+<div align="center">
 
-*This repository intentionally provides a high-level engineering overview of the system architecture.*
+  <img src="../docs/diagrams/hero-banner.svg" alt="LAILA Engineering Overview" width="100%" />
 
-## 1. Core Engineering Decisions
+  <br/><br/>
 
-### Reasoning-Action Decoupling
-*   **The Concept:** LLMs struggle to reliably execute raw scripts while maintaining a conversational persona. LAILA isolates these two tasks. 
-*   **The Execution:** The AI model outputs strict structured commands. A proprietary backend "Pilot" system executes them deterministically, separating the action from the conversation.
+  [![Performance](https://img.shields.io/badge/Performance-Zero--Idle%20CPU-00F5A0?style=for-the-badge&logo=speedtest&logoColor=black)](Engineering-Overview.md)
+  [![Latency](https://img.shields.io/badge/TTFT-%3C1.5s%20Streaming-00B4FF?style=for-the-badge&logo=fastapi&logoColor=white)](Engineering-Overview.md)
+  [![Memory](https://img.shields.io/badge/Memory-%3C250MB%20RAM-7928CA?style=for-the-badge&logo=ram&logoColor=white)](Engineering-Overview.md)
 
-### Structured Memory Engine
-*   **The Concept:** Raw conversation history bloats infinitely, causing performance degradation.
-*   **The Execution:** Instead of relying on raw text history, LAILA uses a structured, relational database memory system. This allows the system to query exact states, inject compressed summaries, and feed the LLM a hyper-dense, perfectly formatted context payload.
+  <br/><br/>
 
-### Dual LLM Strategy
-*   **The Concept:** Relying on a single model limits flexibility and introduces single points of failure.
-*   **The Execution:** LAILA features intelligent routing. Depending on task complexity and network availability, the system routes requests to either cloud models or local fallback models, ensuring optimal uptime and reasoning capability.
+  <img src="../docs/diagrams/eng-benchmarks-deepdive.svg" alt="Production Telemetry & Hardware Benchmarks" width="100%" />
 
-### Flexible Dynamic Token Allocation
-*   **The Concept:** Hardcoded token limits are either wasteful for simple queries or insufficient for complex multi-step operations.
-*   **The Execution:** An intelligent complexity scoring system analyzes the user's intent and dynamically allocates token budgets. This results in incredibly fast simple queries and high success rates for complex tasks.
+</div>
 
-### Strict Safe-Execution Workspaces
-*   **The Concept:** AI agents need guardrails to prevent accidental system damage.
-*   **The Execution:** LAILA operates in a strict sandbox with dedicated "Pilots". A Router Guard and a Claim Verifier Shield ensure that dangerous commands are intercepted, maintaining system integrity and providing safe rollback mechanisms.
+<br/>
+
+# ⚙️ LAILA Engineering Overview
+
+LAILA was built on a foundational engineering philosophy: **Architecture—not parameter count—is the true bottleneck of local AI agent performance.**
+
+By engineering lean execution pathways, eliminating web bloat, and respecting consumer hardware, LAILA achieves enterprise-grade responsiveness on everyday PCs without requiring high-end dedicated GPUs.
+
+---
+
+## 1. Zero-Node.js & Zero-Electron Desktop Architecture
+
+The dominant pattern for modern desktop software is to wrap web apps in **Electron**. This bundles an entire Chromium browser instance and a full Node.js runtime for every window, consuming **500MB to 1.2GB of RAM on cold boot** and wasting CPU cycles on idle background tasks.
+
+**LAILA adopts a fundamentally superior engineering model:**
+
+| Architecture Dimension | Electron / Standard Desktop AI | LAILA Workstation Platform |
+| :--- | :--- | :--- |
+| **Desktop Shell** | Bundled Chromium + Node.js runtime | **Microsoft Edge WebView2** (Windows Native) via `pywebview` |
+| **Memory Footprint** | 500MB – 1.2GB RAM | **< 250MB RAM** (70%+ memory reduction) |
+| **Backend Runtime** | Node.js JavaScript server | **Compiled Python Standalone Binaries** (`LAILA.exe`, `laila-backend.exe`) |
+| **Dependencies** | Requires `node`, `npm`, gigabytes of `node_modules` | **Zero Dependencies**: 100% self-contained portable distribution |
+| **Idle CPU Load** | 3% – 12% continuous background polling | **0.0% Idle CPU**: Pure event-driven sleep |
+
+---
+
+<div align="center">
+  <img src="../docs/diagrams/runtime-snapshot.svg" alt="Runtime Architecture Snapshot" width="100%" />
+</div>
+
+---
+
+## 2. Modular Frontend Architecture (<500-Line Standard)
+
+To maintain maximum rendering velocity and avoid the fragility of massive monolithic stylesheets or complex JavaScript build pipelines, LAILA's user interface is built on **pure Vanilla web technologies** structured in clean, decoupled modules:
+
+### 🎨 13 Decoupled CSS Modules
+Rather than relying on Tailwind compilers or a single unwieldy CSS file, LAILA's design system is modularized into 13 specialized stylesheets, all strictly maintained within the **300–500 line maintainability zone**:
+* `tokens.css`: Core design tokens, cyan glass gradients, and color systems.
+* `layout.css`: Viewport shell, grid structure, and responsive boundaries.
+* `header_controls.css`: Executive Manager status orb and window controls.
+* `dashboard.css`: Telemetry meters, live CPU/RAM bars, and execution logs.
+* `composer.css`: Multiline prompt editor, dynamic attachments, and mic controls.
+* `chat.css`: Message cards, speech bubbles, and streaming token displays.
+* `pilots_station.css`: Monospace terminal interface for deterministic actuator runs.
+* `modals.css`, `sidebar_trace.css`, `startup_overlay.css`, `cognitive_animations.css`, `scrollbars.css`, `style.css`.
+
+### ⚡ Clean Architecture JavaScript
+* **Zero Compilation Overhead:** Runs natively in the browser without Webpack, Vite, or Babel.
+* **Component Coordinators:** Delegated responsibilities across `chat_renderer.js`, `terminal_trace.js`, `user_profile.js`, `model_selector.js`, `provider_key_gate.js`, and `pilots_station.js`.
+* **Zero Context Pollution:** Execution states in the Pilots Station never contaminate the conversational chat history.
+
+---
+
+<div align="center">
+  <img src="../docs/diagrams/multi-provider-resilience.svg" alt="Multi-Provider Circuit Breakers" width="100%" />
+</div>
+
+---
+
+## 3. Multi-Provider Resilience & Circuit Breakers
+
+LAILA seamlessly bridges local hardware and cloud intelligence:
+* **Local Baseline:** Offline inference powered by local models (Gemma 3 via embedded Ollama).
+* **Cloud Resilience:** Intelligent routing to OpenRouter, Google Gemini, Groq, or OpenAI when intensive multimodal or massive coding context is required.
+* **Automatic Fallback:** If internet connectivity drops or cloud API rate limits are encountered, the system automatically falls back to the local Ollama engine without dropping the user session.
+
+---
+
+<div align="center">
+
+  <img src="../docs/diagrams/engineering-vault-card.svg" alt="The Engineering Vault & Incident Post-Mortems" width="100%" />
+
+  <br/><br/>
+
+  <sub>Designed &amp; Engineered by <b>Ahmed Assem</b> • Lead AI Architect</sub>
+
+</div>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="resBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-r { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-r { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .box-h { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 13px; fill: #00B4FF; }
+    .box-h2 { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 13px; fill: #9D4EDD; }
+    .item-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 12px; fill: #FFFFFF; }
+    .item-d { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 400; font-size: 11px; fill: #64748B; }
+  </style>
+
+  <rect width="1200" height="280" rx="16" fill="url(#resBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-r">MULTI-PROVIDER CIRCUIT BREAKER MATRIX</text>
+  <text x="600" y="58" class="sec-r">⚡ Local-First Engine &amp; Zero-Lag Cloud Failover Architecture</text>
+
+  <!-- Left Box: Local Ollama -->
+  <g transform="translate(50, 80)">
+    <rect width="510" height="170" rx="12" fill="#0A1526" stroke="#00B4FF" stroke-width="1.2"/>
+    <text x="25" y="28" class="box-h">💻 LOCAL OFFLINE ENGINE (TIER 1)</text>
+
+    <rect x="20" y="42" width="470" height="32" rx="6" fill="#060C17"/>
+    <text x="35" y="62" class="item-t">1. Local Ollama (Gemma 3 4B Instruct)</text>
+    <text x="285" y="62" class="item-d">CPU/VRAM Native Inference</text>
+
+    <rect x="20" y="82" width="470" height="32" rx="6" fill="#060C17"/>
+    <text x="35" y="102" class="item-t">2. Non-Blocking 1.5s Pre-Flight Probe</text>
+    <text x="300" y="102" class="item-d">Zero 300s Socket Hangs</text>
+
+    <rect x="20" y="122" width="470" height="32" rx="6" fill="#060C17"/>
+    <text x="35" y="142" class="item-t">3. Tupled Sockets (3.0s Connect, 180.0s Read)</text>
+  </g>
+
+  <!-- Connector Arrow -->
+  <line x1="565" y1="165" x2="635" y2="165" stroke="#00F5A0" stroke-width="2" stroke-dasharray="4,4"/>
+  <polygon points="640,165 630,160 630,170" fill="#00F5A0"/>
+  <text x="600" y="152" font-family="'Segoe UI', Inter, sans-serif" font-size="9" fill="#00F5A0" font-weight="700" text-anchor="middle">FAILOVER</text>
+
+  <!-- Right Box: Cloud Matrix -->
+  <g transform="translate(640, 80)">
+    <rect width="510" height="170" rx="12" fill="#140A26" stroke="#9D4EDD" stroke-width="1.2"/>
+    <text x="25" y="28" class="box-h2">☁️ CLOUD RESILIENCE MATRIX (TIER 2 - 4)</text>
+
+    <rect x="20" y="42" width="470" height="32" rx="6" fill="#0E061A"/>
+    <text x="35" y="62" class="item-t">1. Google Gemini 2.0 Flash</text>
+    <text x="235" y="62" class="item-d">Primary Cloud Reasoner (TTFT &lt;1.4s)</text>
+
+    <rect x="20" y="82" width="470" height="32" rx="6" fill="#0E061A"/>
+    <text x="35" y="102" class="item-t">2. OpenRouter (Gemma 3 27B / Claude 3.5)</text>
+    <text x="325" y="102" class="item-d">Deep Bilingual Logic</text>
+
+    <rect x="20" y="122" width="470" height="32" rx="6" fill="#0E061A"/>
+    <text x="35" y="142" class="item-t">3. Groq (Llama 3.3 70B Versatile)</text>
+    <text x="285" y="142" class="item-d">Ultra-Low-Latency Stream</text>
+  </g>
+</svg>

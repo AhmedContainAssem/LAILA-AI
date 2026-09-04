@@ -1,39 +1,116 @@
-# 🏗️ High-Level Architecture
+<div align="center">
 
-LAILA is a modular, event-driven local 
+  <img src="../docs/diagrams/hero-banner.svg" alt="LAILA Architecture Overview" width="100%" />
 
-## 1. The Components
+  <br/><br/>
 
-*   **The Backend:** A lightweight, synchronous server architecture pushing live tokens, state changes, and telemetry via Server-Sent Events (SSE).
-*   **The Frontend:** A pure HTML/JS/CSS interface featuring custom CSS-only animations and DOM efficiency. No heavy frameworks are used, ensuring a zero-compilation lightweight footprint.
-*   **The Memory Engine:** A consolidated, proprietary structured database that manages active states, execution telemetry, and semantic context truncation.
-*   **The Actuators (Pilots):** Isolated execution environments (System and Document Pilots) that act as the "hands" of LAILA, operating safely in a deterministic workspace.
+  [![Architecture](https://img.shields.io/badge/Architecture-Dual--Stage%20Decoupled-0A192F?style=for-the-badge&logo=fastapi&logoColor=00B4FF)](Architecture-Overview.md)
+  [![Pilots](https://img.shields.io/badge/Pilots-Modular%20Sub--Engines-7928CA?style=for-the-badge&logo=windows&logoColor=white)](Architecture-Overview.md)
+  [![Security](https://img.shields.io/badge/Security-DPAPI%20%7C%20Local%20Sandbox-00F5A0?style=for-the-badge&logo=shield&logoColor=black)](Engineering-Overview.md)
 
-## 2. System Architecture Flow
+  <br/><br/>
+
+  <img src="../docs/diagrams/four-pillars.svg" alt="The Four Core Pillars" width="100%" />
+
+</div>
+
+<br/>
+
+# 🏗️ LAILA Architecture Overview
+
+LAILA is architected around a dual-stage cognitive pipeline that enforces **Reasoning-Action Decoupling**—strictly segregating the non-deterministic reasoning layer from deterministic actuators and the operating system interface.
+
+---
+
+## 1. Dual-Workspace Decoupled Pipeline
+
+LAILA provides two dedicated runtime workspaces designed to eliminate context pollution and execution bleed:
 
 ```mermaid
 graph TD
-    User[User Input] --> App[Backend Server]
-    App --> Intent[Intent Router]
-    Intent --> CCCO[Dynamic Budgeting]
-    CCCO --> Agent[Agent Engine]
-    Agent --> LLM[LLM Services]
-    LLM --> ReAct[ReAct Loop]
-    ReAct --> Verifier[Verification Shield]
-    Verifier --> Pilots[System / Document Pilots]
-    Pilots --> DB[(Structured Memory)]
-    DB --> Agent
-    Agent --> Stream[Secure SSE Stream]
-    Stream --> UI[Frontend UI]
+    User[User Input] --> Toggle{Active Workspace Mode}
+    
+    %% Mode 1: AI Chat
+    Toggle -->|Chat Mode| ChatApp[Chat Orchestrator Engine]
+    ChatApp --> Complexity[Dynamic Complexity Gate]
+    Complexity --> Memory[Context Pruning & Memory Injector]
+    Memory --> LLM[Inference Engine: Ollama / Gemini / Groq / OpenAI]
+    LLM --> SSEChat[Live SSE Stream]
+    SSEChat --> ChatUI[💬 Conversational AI Workspace]
+    
+    %% Mode 2: Pilots Station
+    Toggle -->|Pilots Mode| PilotApp[Pilot Execution Router]
+    PilotApp --> PilotMgr[Pilot Manager Dispatcher]
+    PilotMgr --> SysPilot[SystemPilot: Windows OS, Power, Schedulers]
+    PilotMgr --> DocPilot[DocumentPilot: 4 Micro-Engine Suite]
+    SysPilot --> WinToast[Windows 11 Action Center Notifications]
+    PilotMgr --> DB[(SQLite Relational State)]
+    PilotMgr --> SSEPilot[Zero-Pollution Monospace Terminal Stream]
+    SSEPilot --> StationUI[⚡ Pilots Workstation Terminal]
 ```
 
-## 3. The Security & Verification Flow
+---
 
-LAILA's architecture includes a robust "Claim Verifier" shield that intercepts proposed actions before they impact the user environment.
+<div align="center">
+  <img src="../docs/diagrams/pilots-deepdive-card.svg" alt="SystemPilot & DocumentPilot Subsystems" width="100%" />
+</div>
 
-1. **Intent Verification:** Checks if tools were used when necessary.
-2. **Ghost Evidence Guard:** Rejects fabricated tool usage.
-3. **Execution Reliance Guard:** Ensures failed tools are not hallucinated as successful.
-4. **Data Mismatch Guard:** Blocks hallucinated paths or dates.
+---
 
-This multi-layered approach ensures absolute grounding and prevents the LLM from fabricating execution results.
+## 2. Deterministic Actuators (The Pilots)
+
+Pilots serve as the high-speed, zero-latency actuators of LAILA. They operate deterministically with **zero LLM tokens and zero prompt inference overhead**.
+
+### 🛠️ SystemPilot
+* **Operating System Automation:** Application launching, path resolution, file discovery, and directory inspections.
+* **Power Management:** Workstation locking, clean restart, and shutdown with safety guardrails.
+* **Action Center Schedulers:** Native Windows 11 notifications, background alarms, and scheduled reminders via `APScheduler`.
+
+### 📄 DocumentPilot (4-Engine Modular Suite)
+* **`PdfEngine`:** Surgical PDF manipulations—merging multi-document streams via `pypdf`, page range splitting, rotation (90°/180°/270°), page deletion, keyword searching, and semi-transparent ReportLab vector watermarking.
+* **`OfficeEngine`:** Word (`.docx`) document processing, tabular transformations (`.xlsx` ↔ `.csv`), and multi-table extraction from complex PDFs into structured Excel sheets.
+* **`ImageEngine`:** Cross-conversion across 13 formats (PNG, JPG, WebP, ICO, TIFF, BMP, PSD, TGA, GIF) and multi-image compilation into unified PDF portfolios.
+* **`TextEngine`:** Multi-encoding text parsing, Markdown generation, and Arabic bidirectional layout synthesis (`arabic_reshaper` + `python-bidi`).
+
+---
+
+<div align="center">
+  <img src="../docs/diagrams/doc-engine-suite.svg" alt="DocumentPilot 4-Engine Modular Suite" width="100%" />
+</div>
+
+---
+
+## 3. Hybrid Memory Hierarchy
+
+LAILA rejects unstructured, infinitely growing raw text histories. The memory architecture is anchored on a local, consolidated **SQLite relational database**:
+
+* **Conversation Threads:** Strictly bound by session IDs with symmetrical truncation to prevent token bloating.
+* **Operational Memory (LKB):** Dynamic key-value operational state tracking working directories, active files, and pending conversions.
+* **Trace Telemetry:** Every execution loop, tool invocation, and decision path is ledgered into `agent_runs_telemetry` for full observability.
+* **System Knowledge:** User preferences, hardware configurations, and long-term facts stored permanently without token cost.
+
+---
+
+<div align="center">
+  <img src="../docs/diagrams/arch-memory-resilience.svg" alt="Hybrid Memory Hierarchy & Circuit Breakers" width="100%" />
+</div>
+
+---
+
+## 4. Security, Isolation & Offline Privacy
+
+* **Zero Cloud Leak:** Local inference routes directly to the embedded Ollama engine (`gemma3:4b`). No user files, document text, or system metadata ever touch external servers in local mode.
+* **Hardware-Backed Encryption:** Provider API credentials (OpenRouter, Gemini, Groq) are protected using the **Windows Data Protection API (DPAPI)**—encrypted with keys tied directly to the user's Windows login.
+* **File Safety Gateway:** Dynamic path sanitization, traversal protection, and pre-execution safety confirmations for destructive commands.
+
+---
+
+<div align="center">
+
+  <img src="../docs/diagrams/runtime-snapshot.svg" alt="Runtime Architecture Snapshot" width="100%" />
+
+  <br/><br/>
+
+  <sub>Designed &amp; Engineered by <b>Ahmed Assem</b> • Lead AI Architect</sub>
+
+</div>

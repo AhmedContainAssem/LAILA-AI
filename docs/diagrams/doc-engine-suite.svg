@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="docSuiteBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-d { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-d { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .sub-d { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 500; font-size: 12px; fill: #94A3B8; text-anchor: middle; }
+    .card-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 14px; fill: #FFFFFF; }
+    .card-sub { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 600; font-size: 10px; }
+    .bullet-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 11px; fill: #FFFFFF; }
+    .bullet-d { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 400; font-size: 10.5px; fill: #94A3B8; }
+  </style>
+
+  <rect width="1200" height="480" rx="16" fill="url(#docSuiteBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-d">DOCUMENTPILOT MODULAR ARCHITECTURE (SOC)</text>
+  <text x="600" y="60" class="sec-d">🛡️ THE 4 SPECIALIZED AUTONOMOUS MICRO-ENGINES</text>
+  <text x="600" y="84" class="sub-d">Decoupled execution pipelines ensuring zero God-file anti-patterns, isolated fault domains &amp; instant speed</text>
+
+  <!-- Card 1: MediaEngine -->
+  <g transform="translate(45, 110)">
+    <rect width="260" height="330" rx="12" fill="#0A1526" stroke="#00B4FF" stroke-width="1.2"/>
+    <circle cx="30" cy="30" r="14" fill="#0A2540"/>
+    <text x="30" y="35" font-size="14" text-anchor="middle">🎨</text>
+    <text x="55" y="27" class="card-title">MediaEngine</text>
+    <text x="55" y="42" class="card-sub" fill="#00B4FF">IMAGE &amp; VECTOR PIPELINE</text>
+    <line x1="20" y1="58" x2="240" y2="58" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(15, 75)">
+      <text y="0" class="bullet-t">Formats Supported:</text>
+      <text y="16" class="bullet-d">PNG, JPG, WebP, ICO, BMP, TIFF, TGA, GIF, PSD, EPS, SVG.</text>
+
+      <text y="48" class="bullet-t">Vector Embedding:</text>
+      <text y="64" class="bullet-d">Deterministic raster-to-SVG vector wrapper encoding.</text>
+
+      <text y="96" class="bullet-t">Icon Generation:</text>
+      <text y="112" class="bullet-d">Standard multi-res Windows ICO generation.</text>
+
+      <text y="144" class="bullet-t">Multi-Image PDF:</text>
+      <text y="160" class="bullet-d">Combines batch photos into single high-res PDF.</text>
+    </g>
+  </g>
+
+  <!-- Card 2: PdfEngine -->
+  <g transform="translate(330, 110)">
+    <rect width="260" height="330" rx="12" fill="#0A1526" stroke="#FF007A" stroke-width="1.2"/>
+    <circle cx="30" cy="30" r="14" fill="#3D0A24"/>
+    <text x="30" y="35" font-size="14" text-anchor="middle">📄</text>
+    <text x="55" y="27" class="card-title">PdfEngine</text>
+    <text x="55" y="42" class="card-sub" fill="#FF007A">SURGICAL PDF OPERATIONS</text>
+    <line x1="20" y1="58" x2="240" y2="58" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(15, 75)">
+      <text y="0" class="bullet-t">Merge &amp; Split:</text>
+      <text y="16" class="bullet-d">Fast concatenation &amp; single/range page extraction.</text>
+
+      <text y="48" class="bullet-t">Page Rotation:</text>
+      <text y="64" class="bullet-d">Deterministic 90°, 180°, 270° angle rotations.</text>
+
+      <text y="96" class="bullet-t">Page Deletion:</text>
+      <text y="112" class="bullet-d">Surgical page removal without full re-render.</text>
+
+      <text y="144" class="bullet-t">In-Doc Keyword Search:</text>
+      <text y="160" class="bullet-d">Returns exact page numbers &amp; matching text snippets.</text>
+    </g>
+  </g>
+
+  <!-- Card 3: OfficeEngine -->
+  <g transform="translate(615, 110)">
+    <rect width="260" height="330" rx="12" fill="#0A1526" stroke="#00F5A0" stroke-width="1.2"/>
+    <circle cx="30" cy="30" r="14" fill="#0A3326"/>
+    <text x="30" y="35" font-size="14" text-anchor="middle">📊</text>
+    <text x="55" y="27" class="card-title">OfficeEngine</text>
+    <text x="55" y="42" class="card-sub" fill="#00F5A0">WORD, EXCEL &amp; TABULAR</text>
+    <line x1="20" y1="58" x2="240" y2="58" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(15, 75)">
+      <text y="0" class="bullet-t">Word DOCX Generation:</text>
+      <text y="16" class="bullet-d">Creates and edits structured Microsoft Word documents.</text>
+
+      <text y="48" class="bullet-t">Offline PDF Fallback:</text>
+      <text y="64" class="bullet-d">Converts Word ➔ PDF without requiring MS Office installed.</text>
+
+      <text y="96" class="bullet-t">PDF Table Extract:</text>
+      <text y="112" class="bullet-d">Extracts multi-page PDF tables into Excel sheets.</text>
+
+      <text y="144" class="bullet-t">Tabular Cross-Conversion:</text>
+      <text y="160" class="bullet-d">Instant CSV ➔ XLSX &amp; XLSX ➔ CSV conversions.</text>
+    </g>
+  </g>
+
+  <!-- Card 4: TextEngine -->
+  <g transform="translate(900, 110)">
+    <rect width="260" height="330" rx="12" fill="#0A1526" stroke="#9D4EDD" stroke-width="1.2"/>
+    <circle cx="30" cy="30" r="14" fill="#2E0A40"/>
+    <text x="30" y="35" font-size="14" text-anchor="middle">📝</text>
+    <text x="55" y="27" class="card-title">TextEngine</text>
+    <text x="55" y="42" class="card-sub" fill="#9D4EDD">MARKDOWN &amp; ARABIC BIDI</text>
+    <line x1="20" y1="58" x2="240" y2="58" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(15, 75)">
+      <text y="0" class="bullet-t">Native Markdown (.md):</text>
+      <text y="16" class="bullet-d">First-class reading &amp; conversion of .md files.</text>
+
+      <text y="48" class="bullet-t">Smart Word-Wrap:</text>
+      <text y="64" class="bullet-d">Automatic paragraph wrapping preventing PDF clipping.</text>
+
+      <text y="96" class="bullet-t">Arabic Bidi &amp; RTL:</text>
+      <text y="112" class="bullet-d">True RTL shaping &amp; Windows TrueType font mapping.</text>
+
+      <text y="144" class="bullet-t">Multi-Encoding Reader:</text>
+      <text y="160" class="bullet-d">Auto-detects UTF-8, UTF-8-BOM, CP1256 &amp; Latin-1.</text>
+    </g>
+  </g>
+</svg>

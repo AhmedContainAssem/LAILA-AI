@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 570" width="100%" height="100%">
+  <defs>
+    <linearGradient id="vaultBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-v { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #FFB703; letter-spacing: 2px; text-anchor: middle; }
+    .sec-v { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .th-v { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 1px; }
+    .v-num { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 900; font-size: 13px; fill: #FFB703; text-anchor: middle; }
+    .v-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 13px; fill: #FFFFFF; }
+    .v-cause { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 400; font-size: 11px; fill: #94A3B8; }
+    .v-sol { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 500; font-size: 11px; fill: #00F5A0; }
+  </style>
+
+  <rect width="1200" height="570" rx="16" fill="url(#vaultBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-v">ARCHITECTURAL RESILIENCE POST-MORTEMS</text>
+  <text x="600" y="58" class="sec-v">🗝️ THE ENGINEERING VAULT &amp; ROOT-CAUSE RESOLUTIONS</text>
+
+  <!-- Table Container -->
+  <rect x="40" y="80" width="1120" height="460" rx="12" fill="#0A1220" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Table Header -->
+  <rect x="40" y="80" width="1120" height="36" rx="12" fill="#0F1B2E"/>
+  <text x="70" y="103" class="th-v">#</text>
+  <text x="120" y="103" class="th-v">BREAKTHROUGH / INCIDENT</text>
+  <text x="430" y="103" class="th-v">TECHNICAL ROOT CAUSE</text>
+  <text x="800" y="103" class="th-v">ENGINEERING RESOLUTION</text>
+
+  <!-- Row 1: Lesson 10 -->
+  <g transform="translate(40, 116)">
+    <line x1="0" y1="68" x2="1120" y2="68" stroke="#1E293B" stroke-width="0.8"/>
+    <circle cx="30" cy="34" r="14" fill="#3D2905"/>
+    <text x="30" y="39" class="v-num">10</text>
+    <text x="80" y="28" class="v-title">Supervisor FSM Freeze</text>
+    <text x="80" y="44" font-size="10" fill="#00B4FF">Runtime Boot Deadlock</text>
+    <text x="390" y="28" class="v-cause">Missing /health readiness route returned 404,</text>
+    <text x="390" y="44" class="v-cause">stalling HealthMonitor supervisor for 60s.</text>
+    <text x="760" y="28" class="v-sol">Implemented @app.route('/health') (200 OK)</text>
+    <text x="760" y="44" class="v-sol">with threaded multi-worker dispatch pool.</text>
+  </g>
+
+  <!-- Row 2: Lesson 11 -->
+  <g transform="translate(40, 184)">
+    <line x1="0" y1="68" x2="1120" y2="68" stroke="#1E293B" stroke-width="0.8"/>
+    <circle cx="30" cy="34" r="14" fill="#3D2905"/>
+    <text x="30" y="39" class="v-num">11</text>
+    <text x="80" y="28" class="v-title">Monolithic Socket Hang</text>
+    <text x="80" y="44" font-size="10" fill="#FF007A">300s Offline Stall</text>
+    <text x="390" y="28" class="v-cause">Scalar timeout=300 blocked TCP handshake</text>
+    <text x="390" y="44" class="v-cause">on closed local ports without fallback.</text>
+    <text x="760" y="28" class="v-sol">Converted to tupled (3.0, 180.0) timeouts</text>
+    <text x="760" y="44" class="v-sol">with 1.5s auto-failover to Gemini / OpenRouter.</text>
+  </g>
+
+  <!-- Row 3: Lesson 12 -->
+  <g transform="translate(40, 252)">
+    <line x1="0" y1="68" x2="1120" y2="68" stroke="#1E293B" stroke-width="0.8"/>
+    <circle cx="30" cy="34" r="14" fill="#3D2905"/>
+    <text x="30" y="39" class="v-num">12</text>
+    <text x="80" y="28" class="v-title">Profile Lock Self-Deadlock</text>
+    <text x="80" y="44" font-size="10" fill="#9D4EDD">Non-Reentrant Lock</text>
+    <text x="390" y="28" class="v-cause">save_user_profile acquired Lock and called</text>
+    <text x="390" y="44" class="v-cause">get_user_profile, hanging thread forever.</text>
+    <text x="760" y="28" class="v-sol">Upgraded to threading.RLock() enabling clean</text>
+    <text x="760" y="44" class="v-sol">nested re-entrant acquisition across call frames.</text>
+  </g>
+
+  <!-- Row 4: Lesson 13 -->
+  <g transform="translate(40, 320)">
+    <line x1="0" y1="68" x2="1120" y2="68" stroke="#1E293B" stroke-width="0.8"/>
+    <circle cx="30" cy="34" r="14" fill="#3D2905"/>
+    <text x="30" y="39" class="v-num">13</text>
+    <text x="80" y="28" class="v-title">Identity Drift &amp; Amnesia</text>
+    <text x="80" y="44" font-size="10" fill="#00F5A0">Historical Memory Leak</text>
+    <text x="390" y="28" class="v-cause">Regex search-and-replace in history corrupted</text>
+    <text x="390" y="44" class="v-cause">Arabic pronouns and leaked past personas.</text>
+    <text x="760" y="28" class="v-sol">Adopted Strategy 3: Atomic SQLite chats purge</text>
+    <text x="760" y="44" class="v-sol">yielding pristine session state for new identity.</text>
+  </g>
+
+  <!-- Row 5: Lesson 14 -->
+  <g transform="translate(40, 388)">
+    <line x1="0" y1="68" x2="1120" y2="68" stroke="#1E293B" stroke-width="0.8"/>
+    <circle cx="30" cy="34" r="14" fill="#3D2905"/>
+    <text x="30" y="39" class="v-num">14</text>
+    <text x="80" y="28" class="v-title">God File Monolith (SoC)</text>
+    <text x="80" y="44" font-size="10" fill="#00B4FF">Doc-Pilot Modularization</text>
+    <text x="390" y="28" class="v-cause">1100-line monolith coupled formats, masked</text>
+    <text x="390" y="44" class="v-cause">errors &amp; crashed Pillow on SVG vector targets.</text>
+    <text x="760" y="28" class="v-sol">Decomposed into 4 micro-engines (core/doc_engine)</text>
+    <text x="760" y="44" class="v-sol">with base64 SVG vector wrapper &amp; multi-encoding.</text>
+  </g>
+
+  <!-- Row 6: Lesson 15 -->
+  <g transform="translate(40, 456)">
+    <circle cx="30" cy="34" r="14" fill="#3D2905"/>
+    <text x="30" y="39" class="v-num">15</text>
+    <text x="80" y="28" class="v-title">Zero-Token Command Hub</text>
+    <text x="80" y="44" font-size="10" fill="#FFB703">System over Model</text>
+    <text x="390" y="28" class="v-cause">Prompt dictionaries caused severe token bloat</text>
+    <text x="390" y="44" class="v-cause">and inference latency on local models.</text>
+    <text x="760" y="28" class="v-sol">Offloaded full command registry to UI hub with</text>
+    <text x="760" y="44" class="v-sol">1-click copy &amp; 2-line lightweight prompt anchor.</text>
+  </g>
+</svg>

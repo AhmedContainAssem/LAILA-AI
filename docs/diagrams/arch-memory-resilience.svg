@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="100%" height="100%">
+  <defs>
+    <linearGradient id="memBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-m { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-m { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .mem-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 14px; fill: #FFFFFF; }
+    .mem-sub { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 10px; }
+    .b-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 11.5px; fill: #FFFFFF; }
+    .b-desc { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 400; font-size: 10.5px; fill: #94A3B8; }
+  </style>
+
+  <rect width="1200" height="460" rx="16" fill="url(#memBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-m">PERSISTENCE &amp; RESILIENCE ARCHITECTURE</text>
+  <text x="600" y="60" class="sec-m">💾 HYBRID MEMORY &amp; CIRCUIT BREAKER MATRIX</text>
+  <text x="600" y="84" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">Long-term immutable knowledge, short-term sliding context budgets &amp; sub-1.5s cloud failover</text>
+
+  <!-- Left Card: 3-Tier Memory Architecture -->
+  <g transform="translate(45, 110)">
+    <rect width="535" height="310" rx="12" fill="#0A1526" stroke="#00B4FF" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#0A2540"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">🧠</text>
+    <text x="65" y="30" class="mem-t">Hybrid 3-Tier Memory Hierarchy</text>
+    <text x="65" y="46" class="mem-sub" fill="#00B4FF">ZERO TOKEN AMNESIA · DYNAMIC COMPLEXITY BUDGETING</text>
+    <line x1="20" y1="62" x2="515" y2="62" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 80)">
+      <rect width="495" height="48" rx="8" fill="#060C17"/>
+      <text x="15" y="20" class="b-title">Tier 1: Core Identity &amp; System Knowledge Base (LKB)</text>
+      <text x="15" y="36" class="b-desc">Static prompt constants anchoring Laila's creator, origins, and core ethics.</text>
+
+      <rect y="58" width="495" height="48" rx="8" fill="#060C17"/>
+      <text x="15" y="78" class="b-title">Tier 2: Short-Term Dynamic Context Window</text>
+      <text x="15" y="94" class="b-desc">Sliding window caching recent turns; auto-scales 350–3500 tokens by query.</text>
+
+      <rect y="116" width="495" height="48" rx="8" fill="#060C17"/>
+      <text x="15" y="136" class="b-title">Tier 3: SQLite Persistent State Ledger</text>
+      <text x="15" y="152" class="b-desc">Physical ACID database storing chat history, working dirs, and active files.</text>
+
+      <rect y="174" width="495" height="44" rx="8" fill="#060C17"/>
+      <text x="15" y="194" class="b-title">Strategy 3 Identity Purge Protocol</text>
+      <text x="15" y="208" class="b-desc">Atomic database purge on user profile mutation, preventing persona drift.</text>
+    </g>
+  </g>
+
+  <!-- Right Card: Circuit Breaker & Failover -->
+  <g transform="translate(620, 110)">
+    <rect width="535" height="310" rx="12" fill="#0A1526" stroke="#00F5A0" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#0A3326"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">🛡️</text>
+    <text x="65" y="30" class="mem-t">Multi-Provider Circuit Breakers</text>
+    <text x="65" y="46" class="mem-sub" fill="#00F5A0">&lt;1.5s CONNECTION FAILOVER · ZERO TCP SOCKET HANGS</text>
+    <line x1="20" y1="62" x2="515" y2="62" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 80)">
+      <rect width="495" height="48" rx="8" fill="#060C17"/>
+      <text x="15" y="20" class="b-title">Tupled Socket Timeouts (3.0s, 180.0s)</text>
+      <text x="15" y="36" class="b-desc">Eliminates 300s socket freezes on unreachable or closed ports.</text>
+
+      <rect y="58" width="495" height="48" rx="8" fill="#060C17"/>
+      <text x="15" y="78" class="b-title">Pre-Flight Liveness Gate</text>
+      <text x="15" y="94" class="b-desc">Fast 1.5s non-blocking probe checks Ollama engine before issuing request.</text>
+
+      <rect y="116" width="495" height="48" rx="8" fill="#060C17"/>
+      <text x="15" y="136" class="b-title">Instant Fallback Cascades</text>
+      <text x="15" y="152" class="b-desc">Local Gemma-3 ➔ Gemini 2.0 Flash ➔ OpenRouter with UI status banners.</text>
+
+      <rect y="174" width="495" height="44" rx="8" fill="#060C17"/>
+      <text x="15" y="194" class="b-title">Re-entrant Lock (RLock) Worker Safety</text>
+      <text x="15" y="208" class="b-desc">Safe multi-threaded profile access without worker thread self-deadlocks.</text>
+    </g>
+  </g>
+</svg>

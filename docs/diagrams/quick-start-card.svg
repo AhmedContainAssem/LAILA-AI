@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="qsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E1726"/>
+      <stop offset="100%" stop-color="#060A12"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-qs { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-qs { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .card-h-qs { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 14px; fill: #FFFFFF; }
+    .code-t { font-family: 'JetBrains Mono', 'Segoe UI Mono', monospace; font-size: 11px; fill: #00F5A0; }
+    .comment-t { font-family: 'JetBrains Mono', 'Segoe UI Mono', monospace; font-size: 10px; fill: #64748B; }
+    .inst-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 500; font-size: 12px; fill: #CBD5E1; }
+  </style>
+
+  <rect width="1200" height="340" rx="16" fill="url(#qsBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-qs">DEPLOYMENT &amp; RUNTIME INITIALIZATION</text>
+  <text x="600" y="58" class="sec-qs">🚀 WORKSTATION QUICK START</text>
+
+  <!-- Left Column: Option A (Desktop App) -->
+  <g transform="translate(45, 80)">
+    <rect width="525" height="230" rx="12" fill="#0A1526" stroke="#00B4FF" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#0A2540"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">📦</text>
+    <text x="65" y="35" class="card-h-qs">Option A: Portable Desktop App (Zero Setup)</text>
+    <text x="65" y="49" font-size="10" fill="#00B4FF" font-family="'Segoe UI', sans-serif">STANDALONE PRODUCTION BINARY</text>
+
+    <!-- Step 1 -->
+    <g transform="translate(20, 75)">
+      <rect width="485" height="42" rx="8" fill="#060C17" stroke="#132035" stroke-width="1"/>
+      <circle cx="25" cy="21" r="11" fill="#00B4FF"/>
+      <text x="25" y="25" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="11" fill="#FFFFFF" text-anchor="middle">1</text>
+      <text x="48" y="25" class="inst-t">Navigate to the compiled distribution directory: <tspan fill="#00B4FF" font-weight="700">dist/LAILA/</tspan></text>
+    </g>
+
+    <!-- Step 2 -->
+    <g transform="translate(20, 130)">
+      <rect width="485" height="42" rx="8" fill="#060C17" stroke="#132035" stroke-width="1"/>
+      <circle cx="25" cy="21" r="11" fill="#00F5A0"/>
+      <text x="25" y="25" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="11" fill="#000000" text-anchor="middle">2</text>
+      <text x="48" y="25" class="inst-t">Double-click <tspan fill="#00F5A0" font-weight="700">LAILA.exe</tspan> — Native WebView2 boots in &lt;0.5s</text>
+    </g>
+
+    <!-- Badge -->
+    <rect x="20" y="188" width="485" height="26" rx="6" fill="#0A3324" stroke="#00F5A0" stroke-width="0.8"/>
+    <text x="262" y="205" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#00F5A0" text-anchor="middle">✓ ZERO PYTHON INSTALLATION REQUIRED · COMPLETELY SELF-CONTAINED</text>
+  </g>
+
+  <!-- Right Column: Option B (Python Dev Server) -->
+  <g transform="translate(630, 80)">
+    <rect width="525" height="230" rx="12" fill="#0A1526" stroke="#9D4EDD" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#290E45"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">💻</text>
+    <text x="65" y="35" class="card-h-qs">Option B: Local Python Development Server</text>
+    <text x="65" y="49" font-size="10" fill="#9D4EDD" font-family="'Segoe UI', sans-serif">MULTI-THREADED FLASK WORKSTATION</text>
+
+    <!-- Terminal Code Box -->
+    <g transform="translate(20, 68)">
+      <rect width="485" height="145" rx="8" fill="url(#termBg)" stroke="#1E293B" stroke-width="1"/>
+      <!-- Top Dots -->
+      <circle cx="16" cy="14" r="4" fill="#EF4444"/>
+      <circle cx="28" cy="14" r="4" fill="#F59E0B"/>
+      <circle cx="40" cy="14" r="4" fill="#10B981"/>
+      <text x="242" y="17" font-family="'Segoe UI', sans-serif" font-size="9" fill="#64748B" text-anchor="middle">PowerShell Terminal</text>
+
+      <g transform="translate(16, 40)">
+        <text x="0" y="0" class="comment-t"># 1. Start Multi-Threaded Gateway</text>
+        <text x="0" y="18" class="code-t">&gt; python app.py</text>
+        <text x="0" y="42" class="comment-t"># 2. Access Workstation UI</text>
+        <text x="0" y="60" class="code-t">&gt; Start-Process "http://127.0.0.1:3000"</text>
+        <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="10" fill="#00B4FF">[APScheduler]: Ready on port 3000 (threaded=True)</text>
+      </g>
+    </g>
+  </g>
+</svg>

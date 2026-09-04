@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="philoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-ph { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-ph { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .quote-t { font-family: 'Segoe UI', Inter, sans-serif; font-style: italic; font-weight: 500; font-size: 12px; fill: #00F5A0; text-anchor: middle; }
+    .tenet-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 14px; fill: #FFFFFF; }
+    .tenet-sub { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 10px; }
+    .p-text { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 400; font-size: 11px; fill: #94A3B8; }
+  </style>
+
+  <rect width="1200" height="520" rx="16" fill="url(#philoBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-ph">THE COGNITIVE FOUNDATION</text>
+  <text x="600" y="60" class="sec-ph">🧬 LAILA'S CORE PHILOSOPHY &amp; DESIGN TENETS</text>
+  <text x="600" y="84" class="quote-t">"LAILA is not powerful because of the model behind her. She's powerful because of the system around her."</text>
+
+  <!-- Tenet 1: System Over Model -->
+  <g transform="translate(45, 110)">
+    <rect width="535" height="180" rx="12" fill="#0A1526" stroke="#00B4FF" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#0A2540"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">🧠</text>
+    <text x="65" y="30" class="tenet-t">1. The "System Over Model" Principle</text>
+    <text x="65" y="46" class="tenet-sub" fill="#00B4FF">INTELLIGENCE AS AN EMERGENT PROPERTY OF ARCHITECTURE</text>
+    <line x1="20" y1="62" x2="515" y2="62" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 80)">
+      <text y="0" class="p-text">Most AI assistants are fragile single-prompt wrappers around LLMs, expecting the model</text>
+      <text y="18" class="p-text">to simultaneously parse regex, manage database transactions, and execute OS actions.</text>
+      <text y="36" class="p-text">LAILA enforces strict functional isolation: The LLM reasons, Memory manages context,</text>
+      <text y="54" class="p-text">Deterministic Pilots execute on disk, and the Claim Verifier guarantees absolute truth.</text>
+      <text y="72" class="p-text" fill="#00B4FF" font-weight="600">➔ Result: Zero hallucinations of execution and pristine cognitive stability.</text>
+    </g>
+  </g>
+
+  <!-- Tenet 2: Reasoning-Action Decoupling -->
+  <g transform="translate(620, 110)">
+    <rect width="535" height="180" rx="12" fill="#0A1526" stroke="#FF007A" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#3D0A24"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">⚡</text>
+    <text x="65" y="30" class="tenet-t">2. Reasoning-Action Decoupling</text>
+    <text x="65" y="46" class="tenet-sub" fill="#FF007A">ELIMINATING TOKEN LEAKAGE &amp; PROMPT POLLUTION</text>
+    <line x1="20" y1="62" x2="515" y2="62" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 80)">
+      <text y="0" class="p-text">Traditional agent frameworks mix conversational generation with JSON tool schemas.</text>
+      <text y="18" class="p-text">This causes leaked internal instructions, broken syntax, and erratic token output.</text>
+      <text y="36" class="p-text">LAILA isolates Stage 1 (Symbolic Execution Ledger) from Stage 2 (Human Synthesis).</text>
+      <text y="54" class="p-text">The model receives only verified physical disk outputs before speaking to the user.</text>
+      <text y="72" class="p-text" fill="#FF007A" font-weight="600">➔ Result: 100% human-grade conversation with 0% unparsed tool residue.</text>
+    </g>
+  </g>
+
+  <!-- Tenet 3: Zero-Ghost Grounding -->
+  <g transform="translate(45, 310)">
+    <rect width="535" height="180" rx="12" fill="#0A1526" stroke="#00F5A0" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#0A3326"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">🛡️</text>
+    <text x="65" y="30" class="tenet-t">3. Absolute Physical Grounding</text>
+    <text x="65" y="46" class="tenet-sub" fill="#00F5A0">ZERO TOLERANCE FOR PHANTOM ACTION OR UNVERIFIED CLAIMS</text>
+    <line x1="20" y1="62" x2="515" y2="62" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 80)">
+      <text y="0" class="p-text">An AI partner that hallucinates having deleted or created a file is dangerous.</text>
+      <text y="18" class="p-text">LAILA employs an un-bypassable Claim Verifier: after every pilot operation, the system</text>
+      <text y="36" class="p-text">physically audits disk state (checksums, file sizes, exit codes, process handles).</text>
+      <text y="54" class="p-text">If a file was not written, LAILA is cryptographically prevented from claiming it was.</text>
+      <text y="72" class="p-text" fill="#00F5A0" font-weight="600">➔ Result: Executive trust where every output represents real hardware state.</text>
+    </g>
+  </g>
+
+  <!-- Tenet 4: Resource Respect -->
+  <g transform="translate(620, 310)">
+    <rect width="535" height="180" rx="12" fill="#0A1526" stroke="#9D4EDD" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#2E0A40"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">🔋</text>
+    <text x="65" y="30" class="tenet-t">4. Hardware Respect &amp; Zero Idle Drain</text>
+    <text x="65" y="46" class="tenet-sub" fill="#9D4EDD">DESKTOP EFFICIENCY WITHOUT STEALING DEVELOPER CYCLES</text>
+    <line x1="20" y1="62" x2="515" y2="62" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 80)">
+      <text y="0" class="p-text">Workstation tools must not hog RAM or spin CPU fans when sitting in the background.</text>
+      <text y="18" class="p-text">LAILA eliminates heavy Electron bloat in favor of native WebView2 and pure CSS,</text>
+      <text y="36" class="p-text">guaranteeing 0% CPU and 0% GPU utilization during idle standby.</text>
+      <text y="54" class="p-text">Context sliding windows prevent memory bloat, preserving fast &lt;1.5s token latency.</text>
+      <text y="72" class="p-text" fill="#9D4EDD" font-weight="600">➔ Result: Runs silently 24/7 alongside heavy IDEs, games, and compilation jobs.</text>
+    </g>
+  </g>
+</svg>

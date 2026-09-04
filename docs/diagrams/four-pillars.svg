@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgPillars" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F1B2E"/>
+      <stop offset="100%" stop-color="#080E1A"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .card-h { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 14px; fill: #FFFFFF; }
+    .card-p { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 400; font-size: 11px; fill: #64748B; }
+  </style>
+
+  <rect width="1200" height="240" rx="16" fill="url(#bgPillars)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="30" class="cat-title">FOUNDATIONAL ARCHITECTURE</text>
+  <text x="600" y="55" class="sec-title">⚡ THE FOUR CORE PILLARS</text>
+
+  <!-- Pillar 1 -->
+  <g transform="translate(35, 75)">
+    <rect width="265" height="135" rx="12" fill="url(#cardBg)" stroke="#00B4FF" stroke-width="1.2"/>
+    <circle cx="34" cy="35" r="16" fill="#0A2540"/>
+    <text x="34" y="41" font-size="16" text-anchor="middle">🧠</text>
+    <text x="62" y="34" class="card-h">Dual-Stage Pipeline</text>
+    <text x="62" y="48" font-size="10" fill="#00B4FF">Reasoning-Action Split</text>
+    <text x="18" y="80" class="card-p">Decouples tool execution from chat streaming to prevent JSON leakage &amp; hallucinations.</text>
+    <rect x="18" y="118" width="55" height="3" rx="1.5" fill="#00B4FF"/>
+  </g>
+
+  <!-- Pillar 2 -->
+  <g transform="translate(320, 75)">
+    <rect width="265" height="135" rx="12" fill="url(#cardBg)" stroke="#FF007A" stroke-width="1.2"/>
+    <circle cx="34" cy="35" r="16" fill="#3D0A24"/>
+    <text x="34" y="41" font-size="16" text-anchor="middle">🛡️</text>
+    <text x="62" y="34" class="card-h">Claim Verifier</text>
+    <text x="62" y="48" font-size="10" fill="#FF007A">Zero Ghost Evidence</text>
+    <text x="18" y="80" class="card-p">Strict grounding validator inspecting physical disk telemetry before responses are synthesized.</text>
+    <rect x="18" y="118" width="55" height="3" rx="1.5" fill="#FF007A"/>
+  </g>
+
+  <!-- Pillar 3 -->
+  <g transform="translate(605, 75)">
+    <rect width="265" height="135" rx="12" fill="url(#cardBg)" stroke="#00F5A0" stroke-width="1.2"/>
+    <circle cx="34" cy="35" r="16" fill="#0A3324"/>
+    <text x="34" y="41" font-size="16" text-anchor="middle">🔋</text>
+    <text x="62" y="34" class="card-h">0% Idle Hardware</text>
+    <text x="62" y="48" font-size="10" fill="#00F5A0">Zero GPU/CPU Drain</text>
+    <text x="18" y="80" class="card-p">No unbounded CSS blur or infinite animations; 0% GPU load and cold RAM-preserving daemon.</text>
+    <rect x="18" y="118" width="55" height="3" rx="1.5" fill="#00F5A0"/>
+  </g>
+
+  <!-- Pillar 4 -->
+  <g transform="translate(890, 75)">
+    <rect width="275" height="135" rx="12" fill="url(#cardBg)" stroke="#FFB703" stroke-width="1.2"/>
+    <circle cx="34" cy="35" r="16" fill="#3D2905"/>
+    <text x="34" y="41" font-size="16" text-anchor="middle">👤</text>
+    <text x="62" y="34" class="card-h">Clean Identity Sessions</text>
+    <text x="62" y="48" font-size="10" fill="#FFB703">Strategy 3 Isolation</text>
+    <text x="18" y="80" class="card-p">Atomic SQLite wipe upon identity mutation; RLock persistence eliminating persona drift.</text>
+    <rect x="18" y="118" width="55" height="3" rx="1.5" fill="#FFB703"/>
+  </g>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="100%" height="100%">
+  <defs>
+    <linearGradient id="decoupleBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-dc { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-dc { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .stage-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 14px; fill: #FFFFFF; }
+    .stage-sub { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 10px; }
+    .step-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 12px; fill: #FFFFFF; }
+    .step-d { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 400; font-size: 11px; fill: #94A3B8; }
+  </style>
+
+  <rect width="1200" height="460" rx="16" fill="url(#decoupleBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-dc">ARCHITECTURAL DECOUPLING</text>
+  <text x="600" y="60" class="sec-dc">⚡ REASONING-ACTION DECOUPLING ARCHITECTURE</text>
+  <text x="600" y="84" font-family="'Segoe UI', sans-serif" font-size="12" fill="#94A3B8" text-anchor="middle">How LAILA completely separates system execution from natural language conversation</text>
+
+  <!-- Left Card: Stage 1 Execution Engine -->
+  <g transform="translate(45, 110)">
+    <rect width="535" height="310" rx="12" fill="#0A1526" stroke="#00B4FF" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#0A2540"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">⚙️</text>
+    <text x="65" y="30" class="stage-title">Stage 1: Symbolic Execution &amp; Ledger</text>
+    <text x="65" y="46" class="stage-sub" fill="#00B4FF">ZERO NATURAL LANGUAGE OUTPUT · STRICT DETERMINISM</text>
+    <line x1="20" y1="62" x2="515" y2="62" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 80)">
+      <rect width="495" height="48" rx="8" fill="#060C17"/>
+      <text x="15" y="20" class="step-t">1. Intent Classification &amp; Routing:</text>
+      <text x="15" y="38" class="step-d">Fast regex + AST semantic router identifies target pilots without LLM lag.</text>
+
+      <rect y="58" width="495" height="48" rx="8" fill="#060C17"/>
+      <text x="15" y="78" class="step-t">2. Pilot Hardware Invocation:</text>
+      <text x="15" y="96" class="step-d">SystemPilot or DocumentPilot executes deterministic Python I/O primitives.</text>
+
+      <rect y="116" width="495" height="48" rx="8" fill="#060C17"/>
+      <text x="15" y="136" class="step-t">3. Physical State Telemetry:</text>
+      <text x="15" y="154" class="step-d">Captures file sizes, checksums, process handles, and execution exit codes.</text>
+
+      <rect y="174" width="495" height="44" rx="8" fill="#060C17"/>
+      <text x="15" y="194" class="step-t">4. Execution Ledger Commit:</text>
+      <text x="15" y="210" class="step-d">Records verified action into SQLite ledger before any response generation.</text>
+    </g>
+  </g>
+
+  <!-- Right Card: Stage 2 Synthesis Engine -->
+  <g transform="translate(620, 110)">
+    <rect width="535" height="310" rx="12" fill="#0A1526" stroke="#00F5A0" stroke-width="1.2"/>
+    <circle cx="35" cy="35" r="16" fill="#0A3326"/>
+    <text x="35" y="41" font-size="16" text-anchor="middle">💬</text>
+    <text x="65" y="30" class="stage-title">Stage 2: Grounded Conversational Synthesis</text>
+    <text x="65" y="46" class="stage-sub" fill="#00F5A0">PURE NATURAL LANGUAGE · GROUNDED TRUTH ONLY</text>
+    <line x1="20" y1="62" x2="515" y2="62" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 80)">
+      <rect width="495" height="48" rx="8" fill="#060C17"/>
+      <text x="15" y="20" class="step-t">1. Verified State Context Injection:</text>
+      <text x="15" y="38" class="step-d">Model receives verified Ledger facts — no tool calling schemas in context.</text>
+
+      <rect y="58" width="495" height="48" rx="8" fill="#060C17"/>
+      <text x="15" y="78" class="step-t">2. Bilingual Human Persona Assembly:</text>
+      <text x="15" y="96" class="step-d">Applies Egyptian executive partner persona with high emotional intelligence.</text>
+
+      <rect y="116" width="495" height="48" rx="8" fill="#060C17"/>
+      <text x="15" y="136" class="step-t">3. Non-Blocking SSE Streaming:</text>
+      <text x="15" y="154" class="step-d">Streams real-time markdown tokens over Server-Sent Events to the frontend.</text>
+
+      <rect y="174" width="495" height="44" rx="8" fill="#060C17"/>
+      <text x="15" y="194" class="step-t">4. Context Budget Compression:</text>
+      <text x="15" y="210" class="step-d">Sliding window prunes stale tokens, maintaining &lt;1.5s TTFT responsiveness.</text>
+    </g>
+  </g>
+</svg>
