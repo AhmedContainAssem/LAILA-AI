@@ -75,8 +75,8 @@
       <text x="25" y="35" class="bench-title" fill="#00F5A0">🛡️ Zero-Ghost Grounding Architecture</text>
       <line x1="20" y1="48" x2="335" y2="48" stroke="#1E293B" stroke-width="1"/>
       <g transform="translate(20, 68)">
-        <text y="0" font-weight="700" font-size="11" fill="#FFFFFF">Claim Verifier Guard:</text>
-        <text y="16" class="bench-desc">Audits actual disk presence and checksums after every action.</text>
+        <text y="0" font-weight="700" font-size="11" fill="#FFFFFF">Deterministic Pilot Guard:</text>
+        <text y="16" class="bench-desc">Executes pure OS &amp; file operations with 0ms LLM latency.</text>
         <text y="44" font-weight="700" font-size="11" fill="#FFFFFF">Destructive Guardrails:</text>
         <text y="60" class="bench-desc">Requires mandatory bulk confirmation before mass operations.</text>
         <text y="88" font-weight="700" font-size="11" fill="#FFFFFF">Audit Ledger:</text>

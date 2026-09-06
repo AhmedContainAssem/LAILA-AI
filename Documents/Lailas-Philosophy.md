@@ -5,7 +5,7 @@
   <br/><br/>
 
   [![Philosophy](https://img.shields.io/badge/Philosophy-System%20over%20Model-00B4FF?style=for-the-badge&logo=probot&logoColor=white)](Lailas-Philosophy.md)
-  [![Autonomy](https://img.shields.io/badge/Autonomy-Reasoning%20%7C%20Action%20Decoupling-7928CA?style=for-the-badge&logo=openai&logoColor=white)](Lailas-Philosophy.md)
+  [![Autonomy](https://img.shields.io/badge/Autonomy-Reasoning%20%7C%20Action%20Decoupling-7928CA?style=for-the-badge&logo=lightning&logoColor=white)](Lailas-Philosophy.md)
   [![Grounding](https://img.shields.io/badge/Grounding-Zero%20Ghost%20Action-00F5A0?style=for-the-badge&logo=shield&logoColor=black)](Lailas-Philosophy.md)
 
   <br/><br/>
@@ -86,6 +86,7 @@ Instead of forcing a single language model to simultaneously act as the terminal
 * **Deterministic Grounding:** Zero tolerance for fake system actions. True autonomy requires verifiable truth.
 * **System Resource Respect:** Zero idle load. Clean thread shutdowns. Efficient memory reclamation.
 * **Radical Observability:** Complete transparency into every cognitive loop, execution path, and resource metric via the live telemetry dashboard.
+* **Zero-Greed & Long-Term Free Experience:** Rejection of artificial paywalls and predatory credit extraction. Leveraging open-weight frontier intelligence (DeepSeek R1/V3, Qwen 2.5 Coder, Gemma 3) to guarantee sustainable, permanent free access without subscriptions.
 
 ---
 

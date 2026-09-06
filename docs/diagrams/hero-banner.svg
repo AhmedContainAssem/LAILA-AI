@@ -71,13 +71,13 @@
     <rect x="20" y="105" width="60" height="4" rx="2" fill="#FF007A"/>
   </g>
 
-  <!-- Card 3: Claim Verifier -->
+  <!-- Card 3: Executive Notebook -->
   <g transform="translate(605, 160)">
     <rect width="255" height="125" rx="14" fill="url(#cardGrad)" stroke="#00F5A0" stroke-width="1.5" stroke-opacity="0.6"/>
     <circle cx="36" cy="38" r="18" fill="#0A3324"/>
-    <text x="36" y="44" font-size="18" text-anchor="middle" fill="#00F5A0">🛡️</text>
-    <text x="68" y="42" class="card-title">Claim Verifier</text>
-    <text x="20" y="80" class="card-desc">Zero-ghost evidence grounding &amp; objective audit guards.</text>
+    <text x="36" y="44" font-size="18" text-anchor="middle" fill="#00F5A0">📓</text>
+    <text x="68" y="42" class="card-title">Executive Notebook</text>
+    <text x="20" y="80" class="card-desc">Keep Notes engine, rich text editing, &amp; multi-format exports.</text>
     <rect x="20" y="105" width="60" height="4" rx="2" fill="#00F5A0"/>
   </g>
 

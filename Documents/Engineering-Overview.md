@@ -5,7 +5,7 @@
   <br/><br/>
 
   [![Performance](https://img.shields.io/badge/Performance-Zero--Idle%20CPU-00F5A0?style=for-the-badge&logo=speedtest&logoColor=black)](Engineering-Overview.md)
-  [![Latency](https://img.shields.io/badge/TTFT-%3C1.5s%20Streaming-00B4FF?style=for-the-badge&logo=fastapi&logoColor=white)](Engineering-Overview.md)
+  [![Latency](https://img.shields.io/badge/TTFT-%3C1.5s%20Streaming-00B4FF?style=for-the-badge&logo=flask&logoColor=white)](Engineering-Overview.md)
   [![Memory](https://img.shields.io/badge/Memory-%3C250MB%20RAM-7928CA?style=for-the-badge&logo=ram&logoColor=white)](Engineering-Overview.md)
 
   <br/><br/>
@@ -46,20 +46,6 @@ The dominant pattern for modern desktop software is to wrap web apps in **Electr
 
 ---
 
-## 2. Modular Frontend Architecture (<500-Line Standard)
-
-To maintain maximum rendering velocity and avoid the fragility of massive monolithic stylesheets or complex JavaScript build pipelines, LAILA's user interface is built on **pure Vanilla web technologies** structured in clean, decoupled modules:
-
-### 🎨 13 Decoupled CSS Modules
-Rather than relying on Tailwind compilers or a single unwieldy CSS file, LAILA's design system is modularized into 13 specialized stylesheets, all strictly maintained within the **300–500 line maintainability zone**:
-* `tokens.css`: Core design tokens, cyan glass gradients, and color systems.
-* `layout.css`: Viewport shell, grid structure, and responsive boundaries.
-* `header_controls.css`: Executive Manager status orb and window controls.
-* `dashboard.css`: Telemetry meters, live CPU/RAM bars, and execution logs.
-* `composer.css`: Multiline prompt editor, dynamic attachments, and mic controls.
-* `chat.css`: Message cards, speech bubbles, and streaming token displays.
-* `pilots_station.css`: Monospace terminal interface for deterministic actuator runs.
-* `modals.css`, `sidebar_trace.css`, `startup_overlay.css`, `cognitive_animations.css`, `scrollbars.css`, `style.css`.
 
 ### ⚡ Clean Architecture JavaScript
 * **Zero Compilation Overhead:** Runs natively in the browser without Webpack, Vite, or Babel.
@@ -78,7 +64,7 @@ Rather than relying on Tailwind compilers or a single unwieldy CSS file, LAILA's
 
 LAILA seamlessly bridges local hardware and cloud intelligence:
 * **Local Baseline:** Offline inference powered by local models (Gemma 3 via embedded Ollama).
-* **Cloud Resilience:** Intelligent routing to OpenRouter, Google Gemini, Groq, or OpenAI when intensive multimodal or massive coding context is required.
+* **Cloud Resilience:** Intelligent routing to OpenRouter (DeepSeek R1/V3, Qwen 2.5 Coder, Gemma 3), Google Gemini (2.5 &amp; 3.5 Flash), or Groq Cloud (Llama 3.3 70B) for frontier reasoning and code generation with zero paywalls.
 * **Automatic Fallback:** If internet connectivity drops or cloud API rate limits are encountered, the system automatically falls back to the local Ollama engine without dropping the user session.
 
 ---

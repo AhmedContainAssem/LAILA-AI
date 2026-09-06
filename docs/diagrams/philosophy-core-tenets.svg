@@ -34,7 +34,7 @@
       <text y="0" class="p-text">Most AI assistants are fragile single-prompt wrappers around LLMs, expecting the model</text>
       <text y="18" class="p-text">to simultaneously parse regex, manage database transactions, and execute OS actions.</text>
       <text y="36" class="p-text">LAILA enforces strict functional isolation: The LLM reasons, Memory manages context,</text>
-      <text y="54" class="p-text">Deterministic Pilots execute on disk, and the Claim Verifier guarantees absolute truth.</text>
+      <text y="54" class="p-text">Deterministic Pilots execute on disk, guaranteeing verified physical truth.</text>
       <text y="72" class="p-text" fill="#00B4FF" font-weight="600">➔ Result: Zero hallucinations of execution and pristine cognitive stability.</text>
     </g>
   </g>
@@ -68,9 +68,9 @@
 
     <g transform="translate(20, 80)">
       <text y="0" class="p-text">An AI partner that hallucinates having deleted or created a file is dangerous.</text>
-      <text y="18" class="p-text">LAILA employs an un-bypassable Claim Verifier: after every pilot operation, the system</text>
+      <text y="18" class="p-text">LAILA employs deterministic OS Pilots: after every actuator operation, the system</text>
       <text y="36" class="p-text">physically audits disk state (checksums, file sizes, exit codes, process handles).</text>
-      <text y="54" class="p-text">If a file was not written, LAILA is cryptographically prevented from claiming it was.</text>
+      <text y="54" class="p-text">If a file was not written, LAILA is architecturally prevented from claiming it was.</text>
       <text y="72" class="p-text" fill="#00F5A0" font-weight="600">➔ Result: Executive trust where every output represents real hardware state.</text>
     </g>
   </g>

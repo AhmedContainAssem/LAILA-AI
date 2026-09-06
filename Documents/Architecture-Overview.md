@@ -4,7 +4,7 @@
 
   <br/><br/>
 
-  [![Architecture](https://img.shields.io/badge/Architecture-Dual--Stage%20Decoupled-0A192F?style=for-the-badge&logo=fastapi&logoColor=00B4FF)](Architecture-Overview.md)
+  [![Architecture](https://img.shields.io/badge/Architecture-Dual--Stage%20Decoupled-0A192F?style=for-the-badge&logo=flask&logoColor=00B4FF)](Architecture-Overview.md)
   [![Pilots](https://img.shields.io/badge/Pilots-Modular%20Sub--Engines-7928CA?style=for-the-badge&logo=windows&logoColor=white)](Architecture-Overview.md)
   [![Security](https://img.shields.io/badge/Security-DPAPI%20%7C%20Local%20Sandbox-00F5A0?style=for-the-badge&logo=shield&logoColor=black)](Engineering-Overview.md)
 
@@ -34,7 +34,7 @@ graph TD
     Toggle -->|Chat Mode| ChatApp[Chat Orchestrator Engine]
     ChatApp --> Complexity[Dynamic Complexity Gate]
     Complexity --> Memory[Context Pruning & Memory Injector]
-    Memory --> LLM[Inference Engine: Ollama / Gemini / Groq / OpenAI]
+    Memory --> LLM[Frontier Open AI: Ollama / Gemini / Groq / OpenRouter (DeepSeek, Qwen)]
     LLM --> SSEChat[Live SSE Stream]
     SSEChat --> ChatUI[💬 Conversational AI Workspace]
     

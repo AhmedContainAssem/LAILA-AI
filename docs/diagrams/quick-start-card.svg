@@ -53,30 +53,32 @@
     <text x="262" y="205" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#00F5A0" text-anchor="middle">✓ ZERO PYTHON INSTALLATION REQUIRED · COMPLETELY SELF-CONTAINED</text>
   </g>
 
-  <!-- Right Column: Option B (Python Dev Server) -->
+  <!-- Right Column: Option B (System Tray & Hotkey) -->
   <g transform="translate(630, 80)">
     <rect width="525" height="230" rx="12" fill="#0A1526" stroke="#9D4EDD" stroke-width="1.2"/>
     <circle cx="35" cy="35" r="16" fill="#290E45"/>
-    <text x="35" y="41" font-size="16" text-anchor="middle">💻</text>
-    <text x="65" y="35" class="card-h-qs">Option B: Local Python Development Server</text>
-    <text x="65" y="49" font-size="10" fill="#9D4EDD" font-family="'Segoe UI', sans-serif">MULTI-THREADED FLASK WORKSTATION</text>
+    <text x="35" y="41" font-size="16" text-anchor="middle">⚡</text>
+    <text x="65" y="35" class="card-h-qs">Option B: Resident System Tray &amp; Global Hotkey</text>
+    <text x="65" y="49" font-size="10" fill="#9D4EDD" font-family="'Segoe UI', sans-serif">WINDOWS NOTIFICATION AREA &amp; HOTKEY ACCESS</text>
 
-    <!-- Terminal Code Box -->
-    <g transform="translate(20, 68)">
-      <rect width="485" height="145" rx="8" fill="url(#termBg)" stroke="#1E293B" stroke-width="1"/>
-      <!-- Top Dots -->
-      <circle cx="16" cy="14" r="4" fill="#EF4444"/>
-      <circle cx="28" cy="14" r="4" fill="#F59E0B"/>
-      <circle cx="40" cy="14" r="4" fill="#10B981"/>
-      <text x="242" y="17" font-family="'Segoe UI', sans-serif" font-size="9" fill="#64748B" text-anchor="middle">PowerShell Terminal</text>
-
-      <g transform="translate(16, 40)">
-        <text x="0" y="0" class="comment-t"># 1. Start Multi-Threaded Gateway</text>
-        <text x="0" y="18" class="code-t">&gt; python app.py</text>
-        <text x="0" y="42" class="comment-t"># 2. Access Workstation UI</text>
-        <text x="0" y="60" class="code-t">&gt; Start-Process "http://127.0.0.1:3000"</text>
-        <text x="0" y="82" font-family="'JetBrains Mono', monospace" font-size="10" fill="#00B4FF">[APScheduler]: Ready on port 3000 (threaded=True)</text>
-      </g>
+    <!-- Step 1 -->
+    <g transform="translate(20, 75)">
+      <rect width="485" height="42" rx="8" fill="#060C17" stroke="#132035" stroke-width="1"/>
+      <circle cx="25" cy="21" r="11" fill="#9D4EDD"/>
+      <text x="25" y="25" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="11" fill="#FFFFFF" text-anchor="middle">1</text>
+      <text x="48" y="25" class="inst-t">Runs silently in background tray: <tspan fill="#9D4EDD" font-weight="700">0% CPU / 0% GPU idle footprint</tspan></text>
     </g>
+
+    <!-- Step 2 -->
+    <g transform="translate(20, 130)">
+      <rect width="485" height="42" rx="8" fill="#060C17" stroke="#132035" stroke-width="1"/>
+      <circle cx="25" cy="21" r="11" fill="#00F5A0"/>
+      <text x="25" y="25" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="11" fill="#000000" text-anchor="middle">2</text>
+      <text x="48" y="25" class="inst-t">Press <tspan fill="#00F5A0" font-weight="700">Alt + Space</tspan> anywhere in Windows to summon LAILA instantly</text>
+    </g>
+
+    <!-- Badge -->
+    <rect x="20" y="188" width="485" height="26" rx="6" fill="#1C0E33" stroke="#9D4EDD" stroke-width="0.8"/>
+    <text x="262" y="205" font-family="'Segoe UI', sans-serif" font-size="11" font-weight="700" fill="#C77DFF" text-anchor="middle">✓ NATIVE WINDOWS 11 ACTION CENTER NOTIFICATIONS &amp; TIMERS</text>
   </g>
 </svg>

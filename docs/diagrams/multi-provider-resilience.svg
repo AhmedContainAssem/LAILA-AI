@@ -48,15 +48,15 @@
     <text x="25" y="28" class="box-h2">☁️ CLOUD RESILIENCE MATRIX (TIER 2 - 4)</text>
 
     <rect x="20" y="42" width="470" height="32" rx="6" fill="#0E061A"/>
-    <text x="35" y="62" class="item-t">1. Google Gemini 2.0 Flash</text>
-    <text x="235" y="62" class="item-d">Primary Cloud Reasoner (TTFT &lt;1.4s)</text>
+    <text x="35" y="62" class="item-t">1. Google Gemini (2.5 &amp; 3.5 Flash)</text>
+    <text x="250" y="62" class="item-d">Primary Cloud Reasoner (TTFT &lt;1.2s)</text>
 
     <rect x="20" y="82" width="470" height="32" rx="6" fill="#0E061A"/>
-    <text x="35" y="102" class="item-t">2. OpenRouter (Gemma 3 27B / Claude 3.5)</text>
-    <text x="325" y="102" class="item-d">Deep Bilingual Logic</text>
+    <text x="35" y="102" class="item-t">2. OpenRouter (DeepSeek R1/V3, Qwen 2.5 Coder)</text>
+    <text x="345" y="102" class="item-d">Frontier Open AI</text>
 
     <rect x="20" y="122" width="470" height="32" rx="6" fill="#0E061A"/>
     <text x="35" y="142" class="item-t">3. Groq (Llama 3.3 70B Versatile)</text>
-    <text x="285" y="142" class="item-d">Ultra-Low-Latency Stream</text>
+    <text x="285" y="142" class="item-d">Ultra-Low-Latency LPU Stream</text>
   </g>
 </svg>
