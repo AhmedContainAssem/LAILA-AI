@@ -130,16 +130,13 @@
 
   <br/><br/>
 
-  ### 📚 Comprehensive Documentation Suite
+  ### 📚 Core Documentation Suite
   
   [🧠 **LAILA's Philosophy**](Documents/Lailas-Philosophy.md) &nbsp;•&nbsp; 
   [🏗️ **Architecture Overview**](Documents/Architecture-Overview.md) &nbsp;•&nbsp; 
   [⚙️ **Engineering & Benchmarks**](Documents/Engineering-Overview.md) &nbsp;•&nbsp; 
-  [📖 **Engineering Handbook**](Documents/Engineering-Handbook.md) &nbsp;•&nbsp; 
-  [🔬 **Deep Technical Research**](Documents/Deep_Research.md) &nbsp;•&nbsp; 
-  [⚡ **Runtime Architecture**](Documents/LAILA_Runtime_Foundational_Architecture.md) &nbsp;•&nbsp; 
-  [⚖️ **Design Decisions (ADRs)**](Documents/Design-Decisions.md) &nbsp;•&nbsp; 
-  [💡 **Lessons Learned**](Documents/Lessons-Learned.md)
+  [⚖️ **Design Decisions (ADRs)**](Documents/Design-Decisions.md)
+
 
   <br/><br/>
 
