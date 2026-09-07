@@ -26,28 +26,10 @@ LAILA is architected around a dual-stage cognitive pipeline that enforces **Reas
 
 LAILA provides two dedicated runtime workspaces designed to eliminate context pollution and execution bleed:
 
-```mermaid
-graph TD
-    User[User Input] --> Toggle{Active Workspace Mode}
-    
-    %% Mode 1: AI Chat
-    Toggle -->|Chat Mode| ChatApp[Chat Orchestrator Engine]
-    ChatApp --> Complexity[Dynamic Complexity Gate]
-    Complexity --> Memory[Context Pruning & Memory Injector]
-    Memory --> LLM[Frontier Open AI: Ollama / Gemini / Groq / OpenRouter (DeepSeek, Qwen)]
-    LLM --> SSEChat[Live SSE Stream]
-    SSEChat --> ChatUI[💬 Conversational AI Workspace]
-    
-    %% Mode 2: Pilots Station
-    Toggle -->|Pilots Mode| PilotApp[Pilot Execution Router]
-    PilotApp --> PilotMgr[Pilot Manager Dispatcher]
-    PilotMgr --> SysPilot[SystemPilot: Windows OS, Power, Schedulers]
-    PilotMgr --> DocPilot[DocumentPilot: 4 Micro-Engine Suite]
-    SysPilot --> WinToast[Windows 11 Action Center Notifications]
-    PilotMgr --> DB[(SQLite Relational State)]
-    PilotMgr --> SSEPilot[Zero-Pollution Monospace Terminal Stream]
-    SSEPilot --> StationUI[⚡ Pilots Workstation Terminal]
-```
+<div align="center">
+  <img src="../docs/diagrams/dual-workspace-pipeline.svg" alt="Dual-Workspace Decoupled Runtime Pipeline" width="100%" />
+</div>
+
 
 ---
 

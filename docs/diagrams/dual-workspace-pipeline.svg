@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 490" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pipeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+    <linearGradient id="chatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0E223D"/>
+      <stop offset="100%" stop-color="#06101D"/>
+    </linearGradient>
+    <linearGradient id="pilotGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B2B20"/>
+      <stop offset="100%" stop-color="#051510"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .sub-t { font-family: 'Segoe UI', Inter, sans-serif; font-size: 12px; fill: #94A3B8; text-anchor: middle; }
+    .col-title { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 15px; fill: #FFFFFF; }
+    .col-sub { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 10px; letter-spacing: 1px; }
+    .step-box-t { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 700; font-size: 12px; fill: #FFFFFF; }
+    .step-box-d { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 400; font-size: 11px; fill: #94A3B8; }
+    .badge-lbl { font-family: 'Segoe UI', Inter, sans-serif; font-weight: 800; font-size: 10px; letter-spacing: 1px; text-anchor: middle; }
+  </style>
+
+  <rect width="1200" height="490" rx="16" fill="url(#pipeBg)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <text x="600" y="32" class="cat-t">WORKSPACE ARCHITECTURE</text>
+  <text x="600" y="58" class="sec-t">⚡ DUAL-WORKSPACE DECOUPLED RUNTIME PIPELINE</text>
+  <text x="600" y="80" class="sub-t">Strict architectural segregation of conversational reasoning from deterministic operating system actuators</text>
+
+  <g transform="translate(425, 96)">
+    <rect width="350" height="32" rx="16" fill="#0A1526" stroke="#1E293B" stroke-width="1"/>
+    <rect x="4" y="4" width="168" height="24" rx="12" fill="#0A2540" stroke="#00B4FF" stroke-width="1"/>
+    <text x="88" y="20" class="badge-lbl" fill="#00B4FF">💬 CHAT MODE</text>
+    <text x="258" y="20" class="badge-lbl" fill="#00F5A0">⚡ PILOTS MODE</text>
+  </g>
+
+  <g transform="translate(40, 142)">
+    <rect width="540" height="320" rx="14" fill="url(#chatGrad)" stroke="#00B4FF" stroke-width="1.2"/>
+    <circle cx="36" cy="36" r="18" fill="#0A2540" stroke="#00B4FF" stroke-width="1"/>
+    <text x="36" y="42" font-size="18" text-anchor="middle">💬</text>
+    <text x="68" y="31" class="col-title">Conversational AI Workspace</text>
+    <text x="68" y="47" class="col-sub" fill="#00B4FF">NON-DETERMINISTIC REASONING · CONTEXT HYGIENE · LIVE STREAM</text>
+    <line x1="20" y1="64" x2="520" y2="64" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 78)">
+      <rect width="500" height="50" rx="8" fill="#060D18" stroke="#1E293B" stroke-width="0.8"/>
+      <text x="16" y="20" class="step-box-t">1. User Ingestion &amp; Complexity Gate:</text>
+      <text x="16" y="38" class="step-box-d">Incoming prompts are dynamically analyzed for intent, scope, and token budget.</text>
+    </g>
+
+    <g transform="translate(20, 136)">
+      <rect width="500" height="50" rx="8" fill="#060D18" stroke="#1E293B" stroke-width="0.8"/>
+      <text x="16" y="20" class="step-box-t">2. Context Pruning &amp; Memory Injection:</text>
+      <text x="16" y="38" class="step-box-d">Prunes historic text and injects relational session knowledge without context bloat.</text>
+    </g>
+
+    <g transform="translate(20, 194)">
+      <rect width="500" height="50" rx="8" fill="#060D18" stroke="#1E293B" stroke-width="0.8"/>
+      <text x="16" y="20" class="step-box-t">3. Frontier Multi-Model Matrix:</text>
+      <text x="16" y="38" class="step-box-d">Routes to DeepSeek R1/V3, Qwen 2.5 Coder, Gemini Flash, Groq, or Local Ollama.</text>
+    </g>
+
+    <g transform="translate(20, 252)">
+      <rect width="500" height="50" rx="8" fill="#060D18" stroke="#1E293B" stroke-width="0.8"/>
+      <text x="16" y="20" class="step-box-t">4. Real-Time SSE Token Stream:</text>
+      <text x="16" y="38" class="step-box-d">Streams formatted markdown and code directly to the conversation UI.</text>
+    </g>
+  </g>
+
+  <g transform="translate(620, 142)">
+    <rect width="540" height="320" rx="14" fill="url(#pilotGrad)" stroke="#00F5A0" stroke-width="1.2"/>
+    <circle cx="36" cy="36" r="18" fill="#0B3322" stroke="#00F5A0" stroke-width="1"/>
+    <text x="36" y="42" font-size="18" text-anchor="middle">⚡</text>
+    <text x="68" y="31" class="col-title">Pilots Command Station</text>
+    <text x="68" y="47" class="col-sub" fill="#00F5A0">100% DETERMINISTIC ACTUATORS · ZERO LLM TOKENS · VERIFIED RECEIPTS</text>
+    <line x1="20" y1="64" x2="520" y2="64" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 78)">
+      <rect width="500" height="50" rx="8" fill="#040F0B" stroke="#1E293B" stroke-width="0.8"/>
+      <text x="16" y="20" class="step-box-t">1. Dispatcher &amp; Execution Router:</text>
+      <text x="16" y="38" class="step-box-d">Matches user action commands deterministically to native Python engine primitives.</text>
+    </g>
+
+    <g transform="translate(20, 136)">
+      <rect width="500" height="50" rx="8" fill="#040F0B" stroke="#1E293B" stroke-width="0.8"/>
+      <text x="16" y="20" class="step-box-t">2. SystemPilot Engine:</text>
+      <text x="16" y="38" class="step-box-d">Executes Windows OS automation, power safety, app launch, and Action Center alerts.</text>
+    </g>
+
+    <g transform="translate(20, 194)">
+      <rect width="500" height="50" rx="8" fill="#040F0B" stroke="#1E293B" stroke-width="0.8"/>
+      <text x="16" y="20" class="step-box-t">3. DocumentPilot (4-Engine Suite):</text>
+      <text x="16" y="38" class="step-box-d">Executes native high-speed PDF, Word DOCX, tabular Excel/CSV, and Image conversions.</text>
+    </g>
+
+    <g transform="translate(20, 252)">
+      <rect width="500" height="50" rx="8" fill="#040F0B" stroke="#1E293B" stroke-width="0.8"/>
+      <text x="16" y="20" class="step-box-t">4. Relational State &amp; Terminal Receipt:</text>
+      <text x="16" y="38" class="step-box-d">Emits 0-pollution monospace receipts with exact exit codes and SQLite ledger updates.</text>
+    </g>
+  </g>
+</svg>
