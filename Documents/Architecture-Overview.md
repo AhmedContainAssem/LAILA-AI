@@ -86,7 +86,7 @@ LAILA rejects unstructured, infinitely growing raw text histories. The memory ar
 
 * **Conversation Threads:** Strictly bound by session IDs with symmetrical truncation to prevent token bloating.
 * **Operational Memory (LKB):** Dynamic key-value operational state tracking working directories, active files, and pending conversions.
-* **Trace Telemetry:** Every execution loop, tool invocation, and decision path is ledgered into `agent_runs_telemetry` for full observability.
+* **Trace Telemetry:** Every execution loop, tool invocation, and decision path is ledgered into local telemetry storage for full observability.
 * **System Knowledge:** User preferences, hardware configurations, and long-term facts stored permanently without token cost.
 
 ---
@@ -99,7 +99,7 @@ LAILA rejects unstructured, infinitely growing raw text histories. The memory ar
 
 ## 4. Security, Isolation & Offline Privacy
 
-* **Zero Cloud Leak:** Local inference routes directly to the embedded Ollama engine (`gemma3:4b`). No user files, document text, or system metadata ever touch external servers in local mode.
+* **Zero Cloud Leak:** Local inference routes directly to the embedded Ollama engine. No user files, document text, or system metadata ever touch external servers in local mode.
 * **Hardware-Backed Encryption:** Provider API credentials (OpenRouter, Gemini, Groq) are protected using the **Windows Data Protection API (DPAPI)**—encrypted with keys tied directly to the user's Windows login.
 * **File Safety Gateway:** Dynamic path sanitization, traversal protection, and pre-execution safety confirmations for destructive commands.
 

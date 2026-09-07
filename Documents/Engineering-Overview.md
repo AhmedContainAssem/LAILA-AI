@@ -47,9 +47,9 @@ The dominant pattern for modern desktop software is to wrap web apps in **Electr
 ---
 
 
-### ⚡ Clean Architecture JavaScript
+### ⚡ Clean Architecture Frontend
 * **Zero Compilation Overhead:** Runs natively in the browser without Webpack, Vite, or Babel.
-* **Component Coordinators:** Delegated responsibilities across `chat_renderer.js`, `terminal_trace.js`, `user_profile.js`, `model_selector.js`, `provider_key_gate.js`, and `pilots_station.js`.
+* **Component Coordinators:** Delegated client-side micro-controllers managing chat rendering, execution trace visualization, user preferences, and real-time streaming state.
 * **Zero Context Pollution:** Execution states in the Pilots Station never contaminate the conversational chat history.
 
 ---
@@ -64,16 +64,12 @@ The dominant pattern for modern desktop software is to wrap web apps in **Electr
 
 LAILA seamlessly bridges local hardware and cloud intelligence:
 * **Local Baseline:** Offline inference powered by local models (Gemma 3 via embedded Ollama).
-* **Cloud Resilience:** Intelligent routing to OpenRouter (DeepSeek R1/V3, Qwen 2.5 Coder, Gemma 3), Google Gemini (2.5 &amp; 3.5 Flash), or Groq Cloud (Llama 3.3 70B) for frontier reasoning and code generation with zero paywalls.
+* **Cloud Resilience:** Intelligent routing to OpenRouter (DeepSeek R1/V3, Qwen 2.5 Coder, Gemma 3), Google Gemini (2.5 & 3.5 Flash), or Groq Cloud (Llama 3.3 70B) for frontier reasoning and code generation with zero paywalls.
 * **Automatic Fallback:** If internet connectivity drops or cloud API rate limits are encountered, the system automatically falls back to the local Ollama engine without dropping the user session.
 
 ---
 
 <div align="center">
-
-  <img src="../docs/diagrams/engineering-vault-card.svg" alt="The Engineering Vault & Incident Post-Mortems" width="100%" />
-
-  <br/><br/>
 
   <sub>Designed &amp; Engineered by <b>Ahmed Assem</b> • Lead AI Architect</sub>
 

@@ -134,8 +134,7 @@
   
   [🧠 **LAILA's Philosophy**](Documents/Lailas-Philosophy.md) &nbsp;•&nbsp; 
   [🏗️ **Architecture Overview**](Documents/Architecture-Overview.md) &nbsp;•&nbsp; 
-  [⚙️ **Engineering & Benchmarks**](Documents/Engineering-Overview.md) &nbsp;•&nbsp; 
-  [⚖️ **Design Decisions (ADRs)**](Documents/Design-Decisions.md)
+  [⚙️ **Engineering & Benchmarks**](Documents/Engineering-Overview.md)
 
 
   <br/><br/>
