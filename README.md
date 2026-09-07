@@ -136,6 +136,8 @@
   [🏗️ **Architecture Overview**](Documents/Architecture-Overview.md) &nbsp;•&nbsp; 
   [⚙️ **Engineering & Benchmarks**](Documents/Engineering-Overview.md)
 
+  Download 👉🏻 https://github.com/AhmedContainAssem/LAILA-AI/releases
+
 
   <br/><br/>
 
