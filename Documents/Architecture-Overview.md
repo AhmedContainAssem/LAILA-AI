@@ -87,12 +87,39 @@ LAILA rejects unstructured, infinitely growing raw text histories. The memory ar
 
 ---
 
+## 5. Executive Floating Modals (Pilot Studio & Keep-Notebook)
+
+LAILA completely eliminates in-page DOM churn and view-switching latency by hosting mission-critical productivity environments in **Floating Glassmorphic Windows**:
+
+* **Executive Keep-Notebook (`Alt + N`):** Persistent personal knowledge vault backed by an isolated `notebook_notes` SQLite table. Features autonomous AI drafting, interactive Markdown checklists, 6-color glass palettes, and multi-format document exporting (PDF/DOCX/MD/CSV) without touching conversational memory.
+* **Executive Pilot Studio (`Alt + P`):** High-speed OS actuator station with a Split-Pane interface. The left pane provides drag-and-drop file staging, native Windows WinForms STA file/folder pickers, and native Windows Explorer file reveals. The right pane provides non-destructive intent preflight previews, multi-model sync, and real-time multithreaded SSE execution streaming.
+
+---
+
+## 6. Multi-Session Sidebar & Google ADK Vector Memory Bank (LTM)
+
+LAILA isolates chat sessions while preserving unified user intelligence through a decoupled memory pipeline:
+* **Strict Session Boundaries:** Each conversation thread is indexed by a dedicated `session_id` in SQLite, ensuring zero prompt history bleed between threads.
+* **Google ADK Vector Memory Bank (`session_memory_vectors`):** Conceptual session summaries are distilled asynchronously and embedded as dense floating-point vectors stored directly in SQLite for sub-millisecond retrieval.
+* **Shared Cognitive Vault (`user_longterm_memory`):** Automatically extracts and clusters recurring user interests, projects, and key facts across all sessions using dense vector cosine similarity.
+* **Zero-Regex Semantic Recall ("Do you remember when...?"):** Autonomous intent anchoring (English & Arabic) queries historical conversation vector embeddings without brittle regexes or context bloat.
+* **Fast Prior Continuity:** New chat sessions automatically pull the summary of the latest preceding session, ensuring natural flow without context amnesia.
+* **Modular Clean Architecture:** Built on strict separation of concerns, ensuring high-throughput local execution, memory safety, and zero context pollution.
+
+---
+
+<div align="center">
+  <img src="../docs/diagrams/core-advantages-card.svg" alt="Dual-Stage Memory & Decoupled Workspaces" width="100%" />
+</div>
+
+---
+
 <div align="center">
 
   <img src="../docs/diagrams/runtime-snapshot.svg" alt="Runtime Architecture Snapshot" width="100%" />
 
   <br/><br/>
 
-  <sub>Designed &amp; Engineered by <b>Ahmed Assem</b> • Lead AI Architect</sub>
+  <sub>Designed &amp; Engineered by <b>Ahmed Assem</b> • Founder &amp; Lead AI Architect</sub>
 
 </div>

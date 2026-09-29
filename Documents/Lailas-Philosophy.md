@@ -82,7 +82,7 @@ Instead of forcing a single language model to simultaneously act as the terminal
 
 ## 4. Fundamental Tenets
 
-* **Local-First Sovereignty:** The platform runs 100% locally with zero required internet connectivity, powered by offline LLMs (Gemma 3 4B via Ollama).
+* **Local-First Sovereignty:** The platform runs 100% locally with zero required internet connectivity, powered by offline LLMs (Gemma 4 E2B via Ollama).
 * **Deterministic Grounding:** Zero tolerance for fake system actions. True autonomy requires verifiable truth.
 * **System Resource Respect:** Zero idle load. Clean thread shutdowns. Efficient memory reclamation.
 * **Radical Observability:** Complete transparency into every cognitive loop, execution path, and resource metric via the live telemetry dashboard.
@@ -96,6 +96,6 @@ Instead of forcing a single language model to simultaneously act as the terminal
 
   <br/><br/>
 
-  <sub>Designed &amp; Engineered by <b>Ahmed Assem</b> • Lead AI Architect</sub>
+  <sub>Designed &amp; Engineered by <b>Ahmed Assem</b> • Founder &amp; Lead AI Architect</sub>
 
 </div>

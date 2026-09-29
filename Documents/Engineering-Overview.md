@@ -47,10 +47,10 @@ The dominant pattern for modern desktop software is to wrap web apps in **Electr
 ---
 
 
-### ⚡ Clean Architecture Frontend
+### ⚡ Clean Architecture JavaScript
 * **Zero Compilation Overhead:** Runs natively in the browser without Webpack, Vite, or Babel.
-* **Component Coordinators:** Delegated client-side micro-controllers managing chat rendering, execution trace visualization, user preferences, and real-time streaming state.
-* **Zero Context Pollution:** Execution states in the Pilots Station never contaminate the conversational chat history.
+* **Component Coordinators:** Delegated responsibilities across `chat_renderer.js`, `terminal_trace.js`, `user_profile.js`, `model_selector.js`, `provider_key_gate.js`, `pilots_station.js`, `native_picker.js`, and `notebook_modal.js`.
+* **Zero Context Pollution:** Execution states in the Pilots Station and Keep-Notebook never contaminate the conversational chat history (`chats` table delta remains 0).
 
 ---
 
@@ -63,14 +63,28 @@ The dominant pattern for modern desktop software is to wrap web apps in **Electr
 ## 3. Multi-Provider Resilience & Circuit Breakers
 
 LAILA seamlessly bridges local hardware and cloud intelligence:
-* **Local Baseline:** Offline inference powered by local models (Gemma 3 via embedded Ollama).
+* **Local Baseline:** Offline inference powered by local models (Gemma 4 E2B via embedded Ollama).
 * **Cloud Resilience:** Intelligent routing to OpenRouter (DeepSeek R1/V3, Qwen 2.5 Coder, Gemma 3), Google Gemini (2.5 & 3.5 Flash), or Groq Cloud (Llama 3.3 70B) for frontier reasoning and code generation with zero paywalls.
 * **Automatic Fallback:** If internet connectivity drops or cloud API rate limits are encountered, the system automatically falls back to the local Ollama engine without dropping the user session.
 
 ---
 
+## 4. Native Desktop Integration & Actuators Engine
+
+* **Windows WinForms STA Interop:** Native multi-file and directory pickers (`/api/system/browse_path`) spawned via PowerShell Single-Threaded Apartment (`-STA`) subprocesses, bypassing browser `fakepath` security barriers.
+* **Pluggable Actuators (`core/pilot_toolkit.py`):** Unified `ToolRegistry` managing deterministic actuators (`MergePDFTool`, `SplitPDFTool`, `ConvertDocumentTool`, `ReadDocumentChunkTool`, `ScheduleTaskTool`, `SystemAppTool`).
+* **Auto-Reflow Document Engine:** Migrated to ReportLab Platypus `SimpleDocTemplate` with XML entity escaping, enabling robust document conversions with zero canvas clipping.
+* **System Architecture:** Refer to [Architecture Overview](Architecture-Overview.md) for full runtime pipeline specifications.
+
+
+---
+
 <div align="center">
 
-  <sub>Designed &amp; Engineered by <b>Ahmed Assem</b> • Lead AI Architect</sub>
+  <img src="../docs/diagrams/engineering-vault-card.svg" alt="The Engineering Vault & Incident Post-Mortems" width="100%" />
+
+  <br/><br/>
+
+  <sub>Designed &amp; Engineered by <b>Ahmed Assem</b> • Founder &amp; Lead AI Architect</sub>
 
 </div>

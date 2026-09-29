@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1322"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B4FF" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00B4FF" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5A0" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00F5A0" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#A855F7" stop-opacity="0.02"/>
+    </linearGradient>
+    <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .cat-title { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-weight: 800; font-size: 11px; fill: #00B4FF; letter-spacing: 2px; text-anchor: middle; }
+    .sec-title { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-weight: 800; font-size: 20px; fill: #FFFFFF; letter-spacing: 1px; text-anchor: middle; }
+    .sec-sub { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-weight: 400; font-size: 12px; fill: #94A3B8; text-anchor: middle; }
+    
+    .card-t { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-weight: 800; font-size: 13.5px; fill: #FFFFFF; }
+    .card-badge { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-weight: 700; font-size: 9.5px; letter-spacing: 1px; }
+    
+    .row-t { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-weight: 700; font-size: 11px; fill: #E2E8F0; }
+    .row-d { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-weight: 400; font-size: 10px; fill: #94A3B8; }
+  </style>
+
+  <!-- Shell Canvas -->
+  <rect width="1200" height="520" rx="16" fill="url(#bgGrad)" stroke="#1E293B" stroke-width="1.5"/>
+
+  <!-- Header Section -->
+  <text x="600" y="32" class="cat-title">COGNITIVE PERSISTENCE &amp; WORKSPACE SOVEREIGNTY</text>
+  <text x="600" y="60" class="sec-title">🧠 DUAL-STAGE MEMORY &amp; ZERO-POLLUTION WORKSPACES</text>
+  <text x="600" y="82" class="sec-sub">Continuous intelligence without prompt bloat · 100% thread isolation · Zero execution collisions</text>
+
+  <!-- ==================== ROW 1 ==================== -->
+
+  <!-- Card 1: Dual Memory Architecture (Top-Left) -->
+  <g transform="translate(45, 105)">
+    <rect width="535" height="185" rx="12" fill="#0A1526" stroke="#00B4FF" stroke-width="1.2"/>
+    <rect width="535" height="185" rx="12" fill="url(#cyanGrad)"/>
+    <circle cx="32" cy="30" r="15" fill="#0A2540"/>
+    <text x="32" y="36" font-size="15" text-anchor="middle">🧠</text>
+    <text x="60" y="26" class="card-t">Dual-Stage Memory Architecture</text>
+    <text x="60" y="42" class="card-badge" fill="#00B4FF">SYMMETRIC WORKING CONTEXT · PERSISTENT LTM VAULT</text>
+    <line x1="20" y1="56" x2="515" y2="56" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 68)">
+      <rect width="495" height="34" rx="6" fill="#060C17"/>
+      <text x="12" y="15" class="row-t">Short-Term Working Context (CCCO):</text>
+      <text x="12" y="27" class="row-d">Dynamic scaling with symmetric truncation preventing prompt bloat from large code pastes.</text>
+
+      <rect y="40" width="495" height="34" rx="6" fill="#060C17"/>
+      <text x="12" y="55" class="row-t">Persistent Long-Term Memory (LTM):</text>
+      <text x="12" y="67" class="row-d">Retains user preferences, project context, and recurring interests across days without token bloat.</text>
+
+      <rect y="80" width="495" height="30" rx="6" fill="#060C17"/>
+      <text x="12" y="95" class="row-t">Google ADK Dense Vector Bank:</text>
+      <text x="12" y="105" class="row-d">Automated session crystallization into high-dimensional vectors stored directly in SQLite.</text>
+    </g>
+  </g>
+
+  <!-- Card 2: Isolated Sessions & Semantic Recall (Top-Right) -->
+  <g transform="translate(620, 105)">
+    <rect width="535" height="185" rx="12" fill="#0A1526" stroke="#00F5A0" stroke-width="1.2"/>
+    <rect width="535" height="185" rx="12" fill="url(#greenGrad)"/>
+    <circle cx="32" cy="30" r="15" fill="#0A3326"/>
+    <text x="32" y="36" font-size="15" text-anchor="middle">💬</text>
+    <text x="60" y="26" class="card-t">Isolated Sessions &amp; Semantic Recall</text>
+    <text x="60" y="42" class="card-badge" fill="#00F5A0">100% THREAD ISOLATION · ZERO-REGEX COSINE SEARCH</text>
+    <line x1="20" y1="56" x2="515" y2="56" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 68)">
+      <rect width="495" height="34" rx="6" fill="#060C17"/>
+      <text x="12" y="15" class="row-t">Strict Thread Boundary Isolation:</text>
+      <text x="12" y="27" class="row-d">Every chat thread is fully sandboxed in SQLite—conversations in Thread A never leak to Thread B.</text>
+
+      <rect y="40" width="495" height="34" rx="6" fill="#060C17"/>
+      <text x="12" y="55" class="row-t">Zero-Regex On-Demand Semantic Recall:</text>
+      <text x="12" y="67" class="row-d">Ask "Do you remember what we talked about?" to dynamically pull past context via vector similarity.</text>
+
+      <rect y="80" width="495" height="30" rx="6" fill="#060C17"/>
+      <text x="12" y="95" class="row-t">Fast Prior Session Continuity:</text>
+      <text x="12" y="105" class="row-d">Fresh chats automatically inherit immediate prior summaries for natural conversational flow.</text>
+    </g>
+  </g>
+
+  <!-- ==================== ROW 2 ==================== -->
+
+  <!-- Card 3: AI Keep-Notebook Studio (Bottom-Left) -->
+  <g transform="translate(45, 305)">
+    <rect width="535" height="185" rx="12" fill="#0A1526" stroke="#A855F7" stroke-width="1.2"/>
+    <rect width="535" height="185" rx="12" fill="url(#purpleGrad)"/>
+    <circle cx="32" cy="30" r="15" fill="#280D45"/>
+    <text x="32" y="36" font-size="15" text-anchor="middle">📓</text>
+    <text x="60" y="26" class="card-t">Executive Keep-Notebook (Alt + N)</text>
+    <text x="60" y="42" class="card-badge" fill="#A855F7">DIRECT CANVAS DRAFTING · ZERO CONTEXT POLLUTION</text>
+    <line x1="20" y1="56" x2="515" y2="56" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 68)">
+      <rect width="495" height="34" rx="6" fill="#060C17"/>
+      <text x="12" y="15" class="row-t">Independent Productivity Workspace:</text>
+      <text x="12" y="27" class="row-d">Organize notes, draft documents with AI, and manage interactive Markdown checklists seamlessly.</text>
+
+      <rect y="40" width="495" height="34" rx="6" fill="#060C17"/>
+      <text x="12" y="55" class="row-t">Zero Conversational Prompt Bloat:</text>
+      <text x="12" y="67" class="row-d">Notes, drafting canvases, and palette colors remain strictly isolated from active chat memory.</text>
+
+      <rect y="80" width="495" height="30" rx="6" fill="#060C17"/>
+      <text x="12" y="95" class="row-t">Multi-Format Document Export Suite:</text>
+      <text x="12" y="105" class="row-d">One-click native document compilation into publication-ready PDF, Word (DOCX), Markdown, &amp; CSV.</text>
+    </g>
+  </g>
+
+  <!-- Card 4: Executive Pilot Studio (Bottom-Right) -->
+  <g transform="translate(620, 305)">
+    <rect width="535" height="185" rx="12" fill="#0A1526" stroke="#F59E0B" stroke-width="1.2"/>
+    <rect width="535" height="185" rx="12" fill="url(#amberGrad)"/>
+    <circle cx="32" cy="30" r="15" fill="#382103"/>
+    <text x="32" y="36" font-size="15" text-anchor="middle">⚡</text>
+    <text x="60" y="26" class="card-t">Executive Pilot Studio (Alt + P)</text>
+    <text x="60" y="42" class="card-badge" fill="#F59E0B">DETERMINISTIC OS ACTUATORS · ZERO LAYOUT COLLISION</text>
+    <line x1="20" y1="56" x2="515" y2="56" stroke="#1E293B" stroke-width="1"/>
+
+    <g transform="translate(20, 68)">
+      <rect width="495" height="34" rx="6" fill="#060C17"/>
+      <text x="12" y="15" class="row-t">Native Windows OS Actuation Deck:</text>
+      <text x="12" y="27" class="row-d">Deep system automation, drag-and-drop file staging, WinForms STA dialogs, &amp; Explorer reveals.</text>
+
+      <rect y="40" width="495" height="34" rx="6" fill="#060C17"/>
+      <text x="12" y="55" class="row-t">Uninterrupted Floating Execution:</text>
+      <text x="12" y="67" class="row-d">Real-time multithreaded SSE execution streaming without resetting the DOM or freezing the chat.</text>
+
+      <rect y="80" width="495" height="30" rx="6" fill="#060C17"/>
+      <text x="12" y="95" class="row-t">Zero Context Contamination:</text>
+      <text x="12" y="105" class="row-d">Heavy tool traces and system command outputs execute cleanly without cluttering chat history.</text>
+    </g>
+  </g>
+</svg>
